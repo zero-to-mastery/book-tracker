@@ -1,0 +1,37 @@
+html {
+	height: 100%;
+}
+
+body{
+	background: url(https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e274a5d7028b3221db5de6cf0b39db6c&auto=format&fit=crop&w=1234&q=80);
+	background-position: center;
+	background-size: cover;
+}
+
+.sideBar{
+	margin-top: 50%;
+	border-right: 1px solid rgba(50,50,50, 0.2);
+}
+
+.mainContent {
+	margin-top: 5%;
+}
+
+h1 {
+	padding-bottom: 20px;
+}
+
+.table thead {
+	background: lightgray;
+	font-weight: bold;
+}
+
+a {
+	color: black;
+}
+
+.btn-basic{
+	background: lightgray;
+	
+}
+
