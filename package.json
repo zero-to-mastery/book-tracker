@@ -1,0 +1,32 @@
+{
+  "name": "book-tracker",
+  "version": "1.0.0",
+  "description": "\"Tracks the amount of books that  you've read, the ones you want to  read and the progress on the ones  you're reading.\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "watch": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickn10/book-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickn10/book-tracker/issues"
+  },
+  "homepage": "https://github.com/nickn10/book-tracker#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

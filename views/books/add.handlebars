@@ -1,0 +1,24 @@
+<div class="row mt-5">
+   <div class="col-12">
+      <h1>Add New Book</h1>
+      <form action="/books/add" method="post">
+         <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" placeholder="Title">
+         </div>
+         <div class="form-group">
+            <label for="author">Author:</label>
+            <input type="text" class="form-control" name="author" placeholder="Author">
+         </div>
+         <div class="form-group">
+            <label for="collection">Collection</label>
+            <select class="form-control" name="collection">
+               <option value="read">Read</option>
+               <option value="wishlist">Wishlist</option>
+               <option value="reading">Reading</option>
+            </select>
+         </div>
+         <input type="submit" value="Add Book" class="btn btn-secondary">
+      </form>
+   </div>
+</div>

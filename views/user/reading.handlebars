@@ -1,0 +1,64 @@
+<div class="row mt-5">
+   <div class="col-3">
+      <div class="sideBar">
+         <a href="/books/add" class="btn btn-secondary">Add Book</a>
+         <table>
+            <thead>
+               <tr>
+                  <th>Description</th>
+                  <th>Total</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <a href="/user/read">Read</a>
+                  </td>
+                  <td>{{numberOfBooks books 'read'}}</td>
+               </tr>
+               <tr>
+                  <td>
+                     <a href="/user/wishlist">Wishlist</td>
+                  <td>{{numberOfBooks books 'wishlist'}}</td>
+               </tr>
+               <tr>
+                  <td>
+                     <a href="/user/reading">Reading</a>
+                  </td>
+                  <td>{{numberOfBooks books 'reading'}}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+   <div class="col-9">
+      <div class="mainContent">
+         <h1>Progress on current books</h1>
+         <table class="table">
+            <thead>
+               <tr>
+                  <td>Title</td>
+                  <td>Author</td>
+                  <td>Progress</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </thead>
+            <tbody>
+                {{#each booksReading}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>
+                       <a class="btn btn-basic btn-sm" href="/books/edit/{{id}}">Edit</a>
+                    </td>
+                    <td>
+                       <a class="btn btn-basic btn-sm" href="/books/{{id}}?_method=DELETE">Delete</a>
+                    </td>
+               </tr>
+               {{/each}}
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
