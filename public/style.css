@@ -10,7 +10,7 @@ html {
 body{
 	background: url(https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e274a5d7028b3221db5de6cf0b39db6c&auto=format&fit=crop&w=1234&q=80);
 	background-position: center;
-	background-size: cover;
+	background-size: 100% 150%;
 }
 
 .sideBar{
