@@ -1,3 +1,9 @@
+/* VARIABLES */
+:root {
+    --primary-color: lightgray; 
+    --link-color: black;
+}
+
 html {
 	height: 100%;
 }
@@ -22,16 +28,16 @@ h1 {
 }
 
 .table thead {
-	background: lightgray;
+	background: var(--primary-color);
 	font-weight: bold;
 }
 
 a {
-	color: black;
+	color: var(--link-color);
 }
 
 .btn-basic{
-	background: lightgray;
+	background: var(--primary-color);
 	
 }
 
