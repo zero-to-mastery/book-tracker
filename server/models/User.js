@@ -30,9 +30,6 @@ const UserSchema = new Schema({
       dateAdded: {
          type: Date,
          default: Date.now
-      },
-      dateFinished: {
-         type: Date
       }
    }]
 },{timestamps: true});
