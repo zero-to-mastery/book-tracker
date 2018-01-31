@@ -3,7 +3,7 @@ const User = require('../models/User');
 const validateUser = async (req, res, next) => {
    try {
       if (req.user) {
-         const user = await User.findOne({ googleID: req.user.googleID });
+         const user = await User.findById(req.user.id);
          if (user) {
             next()
          }
