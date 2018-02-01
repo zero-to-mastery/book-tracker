@@ -15,13 +15,13 @@ router.post('/add', validateUser, async (req, res) => {
    const book = {
       title: req.body.title,
       author: req.body.author,
-      status: req.body.collection
+      status: req.body.status
    };
    try {
       const user = await User.findById(req.user.id);
       user.books.push(book);
       user.save();
-      res.redirect('/user/reading');
+      res.redirect(`/user/${req.body.status}`);
    } catch (e) {
       console.log(e);
       res.redirect('/books/add');
@@ -48,13 +48,13 @@ router.put('/edit/:id', validateUser, async (req, res) => {
          if(book._id.toString() === req.params.id) {
             book.title = req.body.title,
             book.author = req.body.author,
-            book.status = req.body.status || book.status
+            book.status = req.body.status
          }
          return book
       });
       user.books = books;
       await user.save();
-      res.redirect('/user/reading');
+      res.redirect(`/user/${req.body.status}`);
    } catch (e) {
       console.log(e);
       res.redirect('/user/reading');

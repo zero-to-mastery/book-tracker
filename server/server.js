@@ -42,7 +42,8 @@ app.use(overrideMethod);
 // HANDLEBARS CONFIG
 app.engine('handlebars', exphbs({ 
    helpers: {
-      numberOfBooks: hbHelpers.numberOfBooks
+      numberOfBooks: hbHelpers.numberOfBooks,
+      select: hbHelpers.select
    },
    defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
