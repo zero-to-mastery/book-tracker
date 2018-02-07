@@ -1,6 +1,7 @@
+/* VARIABLES */
 :root {
-	--primary-color: lightgray;
-	--link-color: black;
+    --primary-color: lightgray; 
+    --link-color: black;
 }
 
 html {
