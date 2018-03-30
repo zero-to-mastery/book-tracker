@@ -38,6 +38,9 @@ export default class TopNavbar extends React.Component {
                             <NavItem>
                                 <NavLink href="/currentlist">Reading List</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/currentlist">Add a Book</NavLink>
+                            </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
