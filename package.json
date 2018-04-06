@@ -15,5 +15,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "\"Tracks the amount of books that you've read, the ones you want to  read, and the progress on the ones  you're reading.\"",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamcollis/book-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamcollis/book-tracker/issues"
+  },
+  "homepage": "https://github.com/pamcollis/book-tracker#readme",
+  "devDependencies": {}
 }

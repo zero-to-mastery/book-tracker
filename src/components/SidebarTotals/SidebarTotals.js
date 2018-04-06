@@ -1,7 +1,9 @@
 import React from 'react';
 import './SidebarTotals.css';
 
-const SidebarTotals = () => {
+const SidebarTotals = ({cbData, wlData}) => {
+        const cCount = cbData.length;
+        const wlCount = wlData.length;
     return (
         <div>    
         <div className="container">
@@ -22,11 +24,11 @@ const SidebarTotals = () => {
                                         </tr>
                                         <tr>
                                                 <td>Wishlist</td>
-                                                <td>2</td>
+                                                <td>{wlCount}</td>
                                         </tr>
                                         <tr>
                                                 <td>Current</td>
-                                                <td>3</td>
+                                                <td>{cCount}</td>
                                         </tr>
                                 </tbody>
                         </table>
