@@ -1,0 +1,19 @@
+.mainContent {
+    margin-top: 5%;
+}
+    
+h1 {
+    padding-bottom: 20px;
+}
+    
+.table thead {
+    background: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-basic{
+    background: var(--primary-color);
+    
+    }
+    
+    

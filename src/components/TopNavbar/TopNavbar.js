@@ -33,7 +33,7 @@ export default class TopNavbar extends React.Component {
                                 <NavLink href="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/wishlist">Books Wishlist</NavLink>
+                            <p onClick={() => this.props.onRouteChange('WishList')} className="nav-link white underline pa3 pointer">Books WishList</p>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/currentlist">Reading List</NavLink>
