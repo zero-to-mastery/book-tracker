@@ -20,13 +20,13 @@
   "main": "script.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pamcollis/book-tracker.git"
+    "url": "git+https://github.com/zero-to-mastery/book-tracker.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ZTM",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pamcollis/book-tracker/issues"
+    "url": "https://github.com/zero-to-mastery/book-tracker/issues"
   },
-  "homepage": "https://github.com/pamcollis/book-tracker#readme",
+  "homepage": "https://github.com/zero-to-mastery/book-tracker#readme",
   "devDependencies": {}
 }
