@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "hoek": "^5.0.3",
-    "jquery": "^1.12.4",
+    "jquery": "^3.0.0",
     "popper.js": "^1.14.3",
     "react": "^16.3.0",
     "react-bootstrap": "^0.32.1",
