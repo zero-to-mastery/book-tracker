@@ -1,0 +1,68 @@
+/* Declaring CSS Varibales for colors below */
+:root {
+	--header-color: #FF7167; /*Pinkish color*/
+	--header-color2: #2d2c2e;
+	--body-color: #f2f2f2; /*Grey*/
+	--primary-color: #74CEFF; /*Light Bluish Color*/
+	--secondary-color: #92FF86; /*Greenish Color*/
+	--alt-color: #FFE28F; /*Light Brownish color*/
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#body_wrapper {
+	display:grid;
+	height: 100%;
+	width: 100%;
+	grid-auto-columns: repeat(6, 1fr);
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"header header header header header header"
+		"body body body body body body"
+		"footer footer footer footer footer footer"
+}
+
+#header {
+	grid-area: header;
+	background-color: var(--header-color2);
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+#menu-items {
+	padding-left: 12%;
+	width: 100%;
+}
+
+#menu_item {
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: var(--header-color) !important;
+	padding-left: 10px;
+}
+
+#menu_item:hover {
+	color: var(--alt-color) !important;
+}
+
+#logo {
+	height: 100px;
+	/* width: 100px; */
+	padding-left: 20px;
+}
+
+#body {
+	grid-area: body;
+	background-color: var(--body-color);
+	height: 100vh;
+	padding: 25px;
+}
+
+#heading {
+	font-family: 'Raleway', sans-serif;
+}
