@@ -7,7 +7,7 @@
     "hoek": "^5.0.3",
     "jquery": "^3.0.0",
     "popper.js": "^1.14.3",
-    "react": "^16.3.0",
+    "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.0",
     "react-scripts": "1.1.1",
@@ -30,6 +30,6 @@
   "bugs": {
     "url": "https://github.com/zero-to-mastery/book-tracker/issues"
   },
-  "homepage": ".",
+  "homepage": "http://.",
   "devDependencies": {}
 }

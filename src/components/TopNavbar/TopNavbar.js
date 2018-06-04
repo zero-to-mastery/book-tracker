@@ -39,7 +39,7 @@ export default class TopNavbar extends React.Component {
                                 <NavLink href="/currentlist">Reading List</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/currentlist">Add a Book</NavLink>
+                                <p onClick={() => this.props.onRouteChange('AddPage')} className="nav-link white underline pa3 pointer" value="Add Book">Add Book</p>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>

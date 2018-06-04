@@ -6,6 +6,7 @@ import SidebarTotals from '../components/SidebarTotals/SidebarTotals';
 import ReadingList from '../components/ReadingList/ReadingList';
 import GridLayout from '../components/GridLayout/GridLayout';
 import WishList from '../components/WishList/WishList';
+import AddPage from '../components/AddPage/AddPage'
 
 class App extends Component {
 	constructor(props) {
@@ -26,9 +27,10 @@ class App extends Component {
 		};		
 	}
 
-	onRouteChange = () => {
+	onRouteChange = (newRoute) => {
+		console.log(newRoute)
 		this.setState({
-			route: 'wishlist'					
+			route: newRoute					
 		});
 	}
 
@@ -43,10 +45,12 @@ class App extends Component {
 				<SidebarTotals  cbData={currentBooks} wlData={bookWishList} onRouteChange={this.onRoutechange} />
 				<ReadingList  data={currentBooks}/>						
 			</GridLayout>	
-			:<GridLayout>
+			: route ==='WishList' ?
+			<GridLayout>
 				<SidebarTotals cbData={currentBooks} wlData={bookWishList} onRouteChange={this.onRoutechange} />
 				<WishList data={bookWishList} />
-			</GridLayout>		
+			</GridLayout>
+			:<AddPage></AddPage>		
 		}	
 	</div>
     );
