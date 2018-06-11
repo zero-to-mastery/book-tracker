@@ -1,88 +1,91 @@
 /* Declaring CSS Varibales for colors below */
 :root {
-	--header-color: #FF7167; /*Pinkish color*/
-	--header-color2: #2d2c2e;
-	--body-color: #f2f2f2; /*Grey*/
-	--primary-color: #74CEFF; /*Light Bluish Color*/
-	--secondary-color: #92FF86; /*Greenish Color*/
-	--alt-color: #FFE28F; /*Light Brownish color*/
+  --header-color: #ff7167; /*Pinkish color*/
+  --header-color2: #2d2c2e;
+  --body-color: #f2f2f2; /*Grey*/
+  --primary-color: #74ceff; /*Light Bluish Color*/
+  --secondary-color: #92ff86; /*Greenish Color*/
+  --alt-color: #ffe28f; /*Light Brownish color*/
 }
 
-*{
-	margin: 0;
-	padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 #body_wrapper {
-	display:grid;
-	height: 100%;
-	width: 100%;
-	grid-auto-columns: repeat(6, 1fr);
-	grid-template-rows: auto auto auto;
-	grid-template-areas:
-		"header header header header header header"
-		"body body body body body body"
-		"footer footer footer footer footer footer"
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-auto-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header header header header"
+    "body body body body body body"
+    "footer footer footer footer footer footer";
 }
 
 #header {
-	grid-area: header;
-	background-color: var(--header-color2);
-	height: 100px;
-	display: flex;
-	align-items: center;
+  grid-area: header;
+  background-color: var(--header-color2);
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
-#menu-items {
-	padding-left: 12%;
-	width: 100%;
+.menu-items {
+  padding: 8%;
+  width: 100%;
 }
 
-#menu_item {
-	text-decoration: none;
-	font-size: 1.1em;
-	font-weight: bold;
-	color: var(--header-color) !important;
-	padding-left: 10px;
+.search-bar {
+  float: right;
 }
 
-#menu_item:hover {
-	color: var(--alt-color) !important;
+.menu_item {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: lighter;
+  color: var(--header-color) !important;
+  padding-left: 20px;
+}
+
+.menu_item:hover {
+  color: var(--alt-color) !important;
 }
 
 #logo {
-	height: 100px;
-	/* width: 100px; */
-	padding-left: 20px;
+  height: 100px;
+  /* width: 100px; */
+  padding-left: 20px;
 }
 
 #body {
-	grid-area: body;
-	background-color: var(--body-color);
-	height: 100vh;
-	padding: 25px;
-	background: linear-gradient(to left,aliceblue,aquamarine);
+  grid-area: body;
+  background-color: var(--body-color);
+  height: 100vh;
+  padding: 25px;
+  background: linear-gradient(to left, aliceblue, aquamarine);
 }
 
 #heading {
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
-	font-size: 70px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 70px;
 }
 
 input {
-	text-transform: capitalize;
-	text-align: center;
+  text-transform: capitalize;
+  text-align: center;
 }
 
-.btn
-{
-	border-radius: 10px;
-	margin-left: 5px;
+.btn {
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-bottom: 4px;
 }
 
-.btn-primary:hover
-{
-	background-color: #FFE28F;
-	border-color: #FFE28F;
+.btn-primary:hover {
+  background-color: #ffe28f;
+  border-color: #ffe28f;
 }
