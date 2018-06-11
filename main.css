@@ -61,13 +61,28 @@
 	background-color: var(--body-color);
 	height: 100vh;
 	padding: 25px;
+	background: linear-gradient(to left,aliceblue,aquamarine);
 }
 
 #heading {
 	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-size: 70px;
 }
 
 input {
 	text-transform: capitalize;
 	text-align: center;
+}
+
+.btn
+{
+	border-radius: 10px;
+	margin-left: 5px;
+}
+
+.btn-primary:hover
+{
+	background-color: #FFE28F;
+	border-color: #FFE28F;
 }
