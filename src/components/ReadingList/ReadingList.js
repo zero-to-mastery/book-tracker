@@ -24,7 +24,7 @@ const ReadingList = ({data}) => {
                         <td>{book.author}</td>
                         <td>{book.page}</td>
                         <td><a key={index} className="btn btn-basic btn-sm" href="">Edit</a></td>
-                        <td><a  key={index} className="btn btn-basic btn-sm" href="">Delete</a></td>
+                        <td><a key={index} className="btn btn-basic btn-sm" href="">Delete</a></td>
                     </tr>
                 </tbody>
             </table>
