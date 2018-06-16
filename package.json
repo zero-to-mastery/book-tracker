@@ -10,7 +10,7 @@
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.0",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^1.1.1",
     "reactstrap": "^5.0.0",
     "tachyons": "^4.10.0"
   },
