@@ -6,3 +6,4 @@
 - [@mado-is-here](https://github.com/mado-is-here)
 - [@stefananlam](https://github.com/stefananlam)
 - [@ashokvitugit](https://github.com/ashokvitugit)
+- [@Hailot33](https://github.com/Hailot33)
