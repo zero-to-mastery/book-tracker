@@ -7,7 +7,7 @@ const ReadingList = ({data}) => {
         <div className="mainContent">
             <h1>Progress on current books</h1>
             <div>
-                {data.map((book,index) => (
+                
             <table className="table">
                 <thead>
                     <tr>
@@ -19,16 +19,18 @@ const ReadingList = ({data}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td>{book.title}</td>
+                {data.map((book,index) => (
+                    <tr className="bookRow" key={book.id}>
+                        <td className="">{book.title}</td>
                         <td>{book.author}</td>
                         <td>{book.page}</td>
-                        <td><a key={index} className="btn btn-basic btn-sm" href="">Edit</a></td>
-                        <td><a key={index} className="btn btn-basic btn-sm" href="">Delete</a></td>
+                        <td><a key={book.id} className="btn btn-basic btn-sm" href="">Edit</a></td>
+                        <td><a key={book.id} className="btn btn-basic btn-sm" href="">Delete</a></td>
                     </tr>
+                ))}
                 </tbody>
             </table>
-            ))}
+            
             </div>
         </div>
         </div>                       
