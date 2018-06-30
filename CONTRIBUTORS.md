@@ -7,4 +7,5 @@
 - [@stefananlam](https://github.com/stefananlam)
 - [@ashokvitugit](https://github.com/ashokvitugit)
 - [@Hailot33](https://github.com/Hailot33)
-- [@josh-broomfield] (https://github.com/Josh-Broomfield)
+- [@josh-broomfield](https://github.com/Josh-Broomfield)
+- [@DanielJordanov01](https://github.com/DanielJordanov01)
