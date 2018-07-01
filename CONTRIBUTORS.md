@@ -9,3 +9,4 @@
 - [@Hailot33](https://github.com/Hailot33)
 - [@josh-broomfield](https://github.com/Josh-Broomfield)
 - [@DanielJordanov01](https://github.com/DanielJordanov01)
+- [@luckyluck](https://github.com/luckyluck)
