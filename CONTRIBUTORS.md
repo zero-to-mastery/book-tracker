@@ -11,3 +11,4 @@
 - [@DanielJordanov01](https://github.com/DanielJordanov01)
 - [@luckyluck](https://github.com/luckyluck)
 - [@wescravn](https://github.com/wescravn)
+- [@Jerry141](https://github.com/Jerry141)
