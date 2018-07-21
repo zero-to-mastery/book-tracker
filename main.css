@@ -65,13 +65,16 @@
   background-color: var(--body-color);
   height: 100vh;
   padding: 25px;
-  background: linear-gradient(to left, aliceblue, aquamarine);
+  /*background: linear-gradient(to left, aliceblue, aquamarine);*/
+  background: linear-gradient(to right, rgb(52, 119, 141), rgb(120, 153, 171));
 }
 
 #heading {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   font-size: 70px;
+  color: white;
+  text-shadow: 0px 3px 5px black;
 }
 
 input {
