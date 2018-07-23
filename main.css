@@ -3588,3 +3588,16 @@ input {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+
+/*---Login page*/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+#logwrapper {
+  position: absolute;
+  top : 25%;
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+ font-family: "Source Sans Pro", sans-serif;
+ font-weight: 300;
+}
