@@ -36,6 +36,7 @@
 .menu-items {
   padding: 8%;
   width: 100%;
+  align-items: center;
 }
 
 .search-bar {
@@ -45,14 +46,15 @@
 .menu_item {
   text-decoration: none;
   font-size: 1.1em;
-  font-weight: lighter;
-  color: var(--header-color) !important;
-  padding-left: 20px;
+  font-weight: 400;
+  padding: 10px 20px 10px 20px;
   border-radius: 10px;
 }
 
 .menu_item:hover {
-  color: var(--alt-color) !important;
+  color: #ffe28f;
+  text-decoration: none;
+  background-color: rgb(52, 119, 141);
 }
 
 #logo {
@@ -93,11 +95,13 @@ input {
   padding: 10px;
   margin-left: 5px;
   margin-bottom: 4px;
+  width: 100px;
 }
 
 .btn-primary:hover {
   background-color: #ffe28f;
   border-color: #ffe28f;
+  color: #007bff;
 }
 
 /**********Animate.css**********/
@@ -3620,5 +3624,8 @@ input {
   width: 250px;
 }
 
+#inputPage {
+  width: 90px;
+}
 
 
