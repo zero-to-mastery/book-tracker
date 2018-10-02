@@ -1,3 +1,8 @@
 a {
     color: var(--link-color);
 }
+
+.nav-active {
+    color: #FF00FF;
+    background: green;
+}

@@ -8,6 +8,7 @@ class AddPage extends Component {
             toreadInit: ['Game of Thrones', 'Harry Potter', 'Lord of the Rings'],
             toreads: [],
             toreadText: '',
+            inputLength: 0,
             message: false
         };
         this.updateToreadText = this.updateToreadText.bind(this);
@@ -21,14 +22,16 @@ class AddPage extends Component {
     }
 
     updateToreadText(e) {
-        this.setState({
-            toreadText: e.target.value
+        if(e.target.value.length>0) this.setState({
+            toreadText: e.target.value,
+            inputLength: e.target.value.length,
         });
     }
 
     createToread(e) {
         e.preventDefault();
-        this.setState({
+        // console.log(e);
+        if (this.state.inputLength>0) this.setState({
             toreads: [...this.state.toreads, this.state.toreadText],
             toreadText: '',
         });
