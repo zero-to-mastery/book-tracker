@@ -9,6 +9,7 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap';
+// import HomeIcon from '@material-ui/icons/Home';
 
 export default class TopNavbar extends React.Component {
     constructor(props) {
@@ -31,25 +32,25 @@ export default class TopNavbar extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink href="/">Home</NavLink>
+                                <NavLink activeClassName='nav-active-style' href="/"> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <a href="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</a>
+                                <NavLink href="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/currentlist">Reading List</NavLink>
+                                <NavLink activeClassName='nav-active-style' href="/currentlist">Reading List</NavLink>
                             </NavItem>
                             <NavItem>
-                                <a href="/add" className="nav-link white underline pa3 pointer" value="Add Book">Add
-                                    Book</a>
+                                <NavLink activeClassName='nav-active-style' href="/add" className="nav-link white underline pa3 pointer" value="Add Book">Add
+                                    Book</NavLink>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/login">Login</NavLink>
+                                <NavLink activeClassName='nav-active-style' href="/login">Login</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/signup">Sign Up</NavLink>
+                                <NavLink activeClassName='nav-active-style' href="/signup">Sign Up</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
