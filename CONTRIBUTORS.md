@@ -20,3 +20,4 @@
 - [@cruzach](https://github.com/cruzach)
 - [@SrividyaKK](https://github.com/SrividyaKK)
 - [@koukouroukoukou](https://github.com/koukouroukoukou)
+- [@Diogo-P-Carvalho](https://github.com/Diogo-P-Carvalho)
