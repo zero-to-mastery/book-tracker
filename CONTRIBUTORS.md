@@ -24,3 +24,4 @@
 - [@shakib1729](https://github.com/shakib1729)
 - [@nilkamal](https://github.com/nilkamal)
 - [@K-Atnip](https://github.com/K-Atnip)
+- [@giovanaaline](https://github.com/giovanaaline)
