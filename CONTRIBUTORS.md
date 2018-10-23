@@ -23,5 +23,6 @@
 - [@Diogo-P-Carvalho](https://github.com/Diogo-P-Carvalho)
 - [@shakib1729](https://github.com/shakib1729)
 - [@nilkamal](https://github.com/nilkamal)
+- [@rouqaya-abdulhaq](https://github.com/rouqaya-abdulhaq)
 - [@K-Atnip](https://github.com/K-Atnip)
 - [@giovanaaline](https://github.com/giovanaaline)
