@@ -1,11 +1,16 @@
 /* Declaring CSS Variables for colors below */
 :root {
-  --header-color: #ff7167; /*Pinkish color*/
+  --header-color: #ff7167;
+  /*Pinkish color*/
   --header-color2: #2d2c2e;
-  --body-color: #f2f2f2; /*Grey*/
-  --primary-color: #74ceff; /*Light Bluish Color*/
-  --secondary-color: #92ff86; /*Greenish Color*/
-  --alt-color: #ffe28f; /*Light Brownish color*/
+  --body-color: #f2f2f2;
+  /*Grey*/
+  --primary-color: #74ceff;
+  /*Light Bluish Color*/
+  --secondary-color: #92ff86;
+  /*Greenish Color*/
+  --alt-color: #ffe28f;
+  /*Light Brownish color*/
 }
 
 * {
@@ -82,7 +87,13 @@
 
 #tagLine {
   text-align: center;
-  color:white;
+  color: white;
+}
+
+#helperText {
+  text-align: center;
+  color: rgb(255, 255, 255, 1);
+  font-size: 1em;
 }
 
 input {
@@ -128,6 +139,7 @@ input {
 }
 
 @-webkit-keyframes bounce {
+
   from,
   20%,
   53%,
@@ -161,6 +173,7 @@ input {
 }
 
 @keyframes bounce {
+
   from,
   20%,
   53%,
@@ -201,6 +214,7 @@ input {
 }
 
 @-webkit-keyframes flash {
+
   from,
   50%,
   to {
@@ -214,6 +228,7 @@ input {
 }
 
 @keyframes flash {
+
   from,
   50%,
   to {
@@ -352,6 +367,7 @@ input {
 }
 
 @-webkit-keyframes shake {
+
   from,
   to {
     -webkit-transform: translate3d(0, 0, 0);
@@ -377,6 +393,7 @@ input {
 }
 
 @keyframes shake {
+
   from,
   to {
     -webkit-transform: translate3d(0, 0, 0);
@@ -691,6 +708,7 @@ input {
 }
 
 @-webkit-keyframes jello {
+
   from,
   11.1%,
   to {
@@ -735,6 +753,7 @@ input {
 }
 
 @keyframes jello {
+
   from,
   11.1%,
   to {
@@ -786,6 +805,7 @@ input {
 }
 
 @-webkit-keyframes bounceIn {
+
   from,
   20%,
   40%,
@@ -831,6 +851,7 @@ input {
 }
 
 @keyframes bounceIn {
+
   from,
   20%,
   40%,
@@ -883,6 +904,7 @@ input {
 }
 
 @-webkit-keyframes bounceInDown {
+
   from,
   60%,
   75%,
@@ -921,6 +943,7 @@ input {
 }
 
 @keyframes bounceInDown {
+
   from,
   60%,
   75%,
@@ -964,6 +987,7 @@ input {
 }
 
 @-webkit-keyframes bounceInLeft {
+
   from,
   60%,
   75%,
@@ -1002,6 +1026,7 @@ input {
 }
 
 @keyframes bounceInLeft {
+
   from,
   60%,
   75%,
@@ -1045,6 +1070,7 @@ input {
 }
 
 @-webkit-keyframes bounceInRight {
+
   from,
   60%,
   75%,
@@ -1083,6 +1109,7 @@ input {
 }
 
 @keyframes bounceInRight {
+
   from,
   60%,
   75%,
@@ -1126,6 +1153,7 @@ input {
 }
 
 @-webkit-keyframes bounceInUp {
+
   from,
   60%,
   75%,
@@ -1164,6 +1192,7 @@ input {
 }
 
 @keyframes bounceInUp {
+
   from,
   60%,
   75%,
@@ -3603,19 +3632,20 @@ input {
 
 /*---Login page*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
 #logwrapper {
   position: absolute;
-  top : 25%;
+  top: 25%;
   width: 100%;
   height: auto;
   font-size: 14px;
- font-family: "Source Sans Pro", sans-serif;
- font-weight: 300;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
 }
 
 #container {
   text-align: center;
-  margin: 35px;
+  margin: 20px;
 }
 
 .inputBook {
@@ -3627,5 +3657,3 @@ input {
 #inputPage {
   width: 90px;
 }
-
-
