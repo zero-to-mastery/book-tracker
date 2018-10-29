@@ -26,3 +26,4 @@
 - [@rouqaya-abdulhaq](https://github.com/rouqaya-abdulhaq)
 - [@K-Atnip](https://github.com/K-Atnip)
 - [@giovanaaline](https://github.com/giovanaaline)
+- [@jenny07007](https://github.com/jenny07007)
