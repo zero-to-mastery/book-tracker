@@ -1,5 +1,6 @@
 import React from 'react';
 import './TopNavbar.css';
+import { Link } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -32,25 +33,36 @@ export default class TopNavbar extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink activeClassName='nav-active-style' href="/"> Home</NavLink>
+                                <Link to="/">
+                                    <NavLink className='nav-active-style' href="/"> Home</NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</NavLink>
+                                <Link to="/wish-list">
+                                    <NavLink className="nav-link white underline pa3 pointer">Books WishList</NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink activeClassName='nav-active-style' href="/currentlist">Reading List</NavLink>
+                                <Link to="/currentlist">
+                                    <NavLink className='nav-active-style'>Reading List</NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink activeClassName='nav-active-style' href="/add" className="nav-link white underline pa3 pointer" value="Add Book">Add
-                                    Book</NavLink>
+                                <Link to="/add">
+                                    <NavLink className="nav-link white underline pa3 pointer" value="Add Book">Add Book</NavLink>
+                                </Link>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink activeClassName='nav-active-style' href="/login">Login</NavLink>
+                                <Link to="/login">
+                                 <NavLink className='nav-active-style'>Login</NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink activeClassName='nav-active-style' href="/signup">Sign Up</NavLink>
+                                <Link to="/signup">
+                                    <NavLink className='nav-active-style'>Sign Up</NavLink>
+                                </Link>
                             </NavItem>
                         </Nav>
                     </Collapse>
