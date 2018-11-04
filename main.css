@@ -16,6 +16,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:'Montserrat', sans-serif;
 }
 
 #body_wrapper {
@@ -114,6 +115,29 @@ input {
   border-color: #ffe28f;
   color: #007bff;
 }
+
+table{
+  margin:40px auto;
+  width:70%;
+  background-color:rgba(250,250,250,0.9);
+  border:1px solid black;
+}
+tr{
+  text-align: left;
+}
+table,th,td {
+  border-collapse:collapse;
+}
+
+table th,table td{
+  border:1px solid black;
+  padding:5px 10px;
+}
+
+table td{
+  padding:2px 5px;
+}
+
 
 /**********Animate.css**********/
 @charset "UTF-8";
