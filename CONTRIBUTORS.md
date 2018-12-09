@@ -27,3 +27,4 @@
 - [@K-Atnip](https://github.com/K-Atnip)
 - [@giovanaaline](https://github.com/giovanaaline)
 - [@jenny07007](https://github.com/jenny07007)
+- [@ryanpedersen42] (https://github.com/ryanpedersen42)
