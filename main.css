@@ -35,18 +35,14 @@
   grid-area: header;
   background-color: var(--header-color2);
   height: 100px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
 .menu-items {
-  padding: 8%;
+  padding: 4%;
   width: 100%;
   align-items: center;
-}
-
-.search-bar {
-  float: right;
 }
 
 .menu_item {
