@@ -48,7 +48,6 @@ function databaseUpdate(){
 			td.textContent = val; 
 			return td;
 		});
-		//console.log(tdarray);
 		return tdarray;
 	})
 
