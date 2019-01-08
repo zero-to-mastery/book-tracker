@@ -31,3 +31,4 @@
 - [@sanguliupo](https://github.com/sanguliupo)
 - [@raharon](https://github.com/raharon)
 - [@MoniqueCastro](https://github.com/MoniqueCastro)
+- [@diegoAHV](https://github.com/DiegoAHV)
