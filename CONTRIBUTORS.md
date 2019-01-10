@@ -32,3 +32,4 @@
 - [@raharon](https://github.com/raharon)
 - [@MoniqueCastro](https://github.com/MoniqueCastro)
 - [@diegoAHV](https://github.com/DiegoAHV)
+- [@A-Dolah](https://github.com/A-Dolah)
