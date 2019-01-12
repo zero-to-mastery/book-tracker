@@ -35,3 +35,4 @@
 - [@A-Dolah](https://github.com/A-Dolah)
 - [@ttyson0311](https://github.com/ttyson0311)
 - [@aishaoyegunle](https://github.com/aishaoyegunle)
+- [@jrikhsiboev](https://github.com/jrikhsiboev)
