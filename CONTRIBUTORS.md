@@ -36,3 +36,4 @@
 - [@ttyson0311](https://github.com/ttyson0311)
 - [@aishaoyegunle](https://github.com/aishaoyegunle)
 - [@jrikhsiboev](https://github.com/jrikhsiboev)
+- [@marcinostrouch](https://github.com/marcinostrouch)
