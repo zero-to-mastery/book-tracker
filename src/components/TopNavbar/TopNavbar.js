@@ -28,41 +28,29 @@ export default class TopNavbar extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand href="/">Book Tracker</NavbarBrand>
+                    <NavbarBrand tag={Link} to="/">Book Tracker</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <Link to="/">
-                                    <NavLink className='nav-active-style' href="/"> Home</NavLink>
-                                </Link>
+                                <NavLink className='nav-active-style' tag={Link} to="/"> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link to="/wish-list">
-                                    <NavLink className="nav-link white underline pa3 pointer">Books WishList</NavLink>
-                                </Link>
+                                <NavLink tag={Link} to="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link to="/currentlist">
-                                    <NavLink className='nav-active-style'>Reading List</NavLink>
-                                </Link>
+                                <NavLink tag={Link} to="/currentlist" className='nav-active-style'>Reading List</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link to="/add">
-                                    <NavLink className="nav-link white underline pa3 pointer" value="Add Book">Add Book</NavLink>
-                                </Link>
+                                <NavLink tag={Link} to="/add" className="nav-link white underline pa3 pointer" value="Add Book">Add Book</NavLink>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Link to="/login">
-                                 <NavLink className='nav-active-style'>Login</NavLink>
-                                </Link>
+                                <NavLink tag={Link} to="/login" className='nav-active-style'>Login</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link to="/signup">
-                                    <NavLink className='nav-active-style'>Sign Up</NavLink>
-                                </Link>
+                                <NavLink tag={Link} to="/signup" className='nav-active-style'>Sign Up</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

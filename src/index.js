@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose, combineReducers } from 'redux';
+import 'tachyons';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';

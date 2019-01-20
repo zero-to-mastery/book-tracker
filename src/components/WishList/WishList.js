@@ -7,7 +7,7 @@ const WishList = ({ data, props }) => {
       <div className="mainContent">
         <h1>Books on My Wish List</h1>
         <div>
-          <table className="table" data={this.data}>
+          <table className="table" data={data}>
             <thead>
               <tr>
                 <td>Title</td>
