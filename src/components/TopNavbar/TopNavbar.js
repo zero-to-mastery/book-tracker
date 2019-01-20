@@ -28,7 +28,11 @@ export default class TopNavbar extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand href="/">Book Tracker</NavbarBrand>
+                    <Link to="/">
+                        <NavbarBrand href="/">
+                            Book Tracker
+                        </NavbarBrand>
+                    </Link>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
