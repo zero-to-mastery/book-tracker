@@ -5,21 +5,21 @@ class LoginPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-    	signInEmail: '',
-    	signInPassword: '',
+    	loginEmail: '',
+    	loginPassword: '',
     	isFailed: false
     }
 	}
 
 	onEmailChange = (event) => {
-  	this.setState({ signInEmail: event.target.value });
+  	this.setState({ loginEmail: event.target.value });
   }
 
   onPasswordChange = (event) => {
-  	this.setState({ signInPassword: event.target.value });
+  	this.setState({ loginPassword: event.target.value });
   }
 
-  onSubmitSignIn = () => {
+  onSubmitLogin = () => {
   	
   }
 
@@ -28,7 +28,7 @@ class LoginPage extends Component {
   		<article className="mw6 mt4 center">
 	  		<div className="measure">
 			    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-			      <legend className="f3 fw6 ph0 mh0">Sign In</legend>
+			      <legend className="f3 fw6 ph0 mh0">Login</legend>
 			      <div className="mt3">
 			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
 			        <input
@@ -56,10 +56,10 @@ class LoginPage extends Component {
 			    </fieldset>
 			    <div className="">
 			      <input
-			      	onClick={this.onSubmitSignIn}
+			      	onClick={this.onSubmitLogin}
 			      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
 			      	type="submit"
-			      	value="Sign in"
+			      	value="Login"
 			      />
 			    </div>
 			  </div>
