@@ -37,3 +37,4 @@
 - [@aishaoyegunle](https://github.com/aishaoyegunle)
 - [@jrikhsiboev](https://github.com/jrikhsiboev)
 - [@darklordace](https://github.com/darklordace)
+- [@marcinostrouch](https://github.com/marcinostrouch)
