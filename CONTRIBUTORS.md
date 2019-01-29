@@ -38,3 +38,4 @@
 - [@jrikhsiboev](https://github.com/jrikhsiboev)
 - [@darklordace](https://github.com/darklordace)
 - [@marcinostrouch](https://github.com/marcinostrouch)
+- [@simonpankovski](https://github.com/simonpankovski)
