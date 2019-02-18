@@ -40,3 +40,4 @@
 -   [@marcinostrouch](https://github.com/marcinostrouch)
 -   [@simonpankovski](https://github.com/simonpankovski)
 -   [@FairyAssassin](https://github.com/FairyAssassin)
+-   [@kwtoh](https://github.com/kwtoh)

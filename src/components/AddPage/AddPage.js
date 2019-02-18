@@ -73,22 +73,28 @@ class AddPage extends Component {
                 </div>
                 <div className="container wb">
                     <div className="row">
-                        <form onSubmit={this.createToread}>
-                            <div className='col-lg-12 input-group'>
-                                <input type="text" className="center-block"
-                                    placeholder="what's your book?"
-                                    value={toreadText}
-                                    onChange={this.updateToreadText} />
-                                <button className="btn btn-success center-block">Add Book</button>
-                            </div>
-                        </form>
-                        <ul>{toreads.map((toread) => {
-                            return(
-                                <li key={Math.floor(Math.random() * 10000) + 1}>{toread}</li>
-                            )
-                        })}
-                            {message ? <li>No search results.</li> : ''}
-                        </ul>
+                        <div className="booklist">
+                            <h2>Book List</h2>
+                            <ul>{toreads.map((toread) => {
+                                const link = `http://www.google.com/search?q=${toread}%20book`;
+                                return(
+                                    <li key={Math.floor(Math.random() * 10000) + 1}><a href={link} target="_blank">{toread}</a></li>
+                                )
+                            })}
+                                {message ? <li>No search results.</li> : ''}
+                            </ul>
+                        </div>
+                        <div className="bookadd">
+                            <form onSubmit={this.createToread}>
+                                <div className='col-lg-12 input-group'>
+                                    <input type="text" className="center-block"
+                                        placeholder="Book Name"
+                                        value={toreadText}
+                                        onChange={this.updateToreadText} />
+                                    <button className="btn btn-success center-block">Add</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
