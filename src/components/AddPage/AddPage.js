@@ -78,7 +78,7 @@ class AddPage extends Component {
                             <ul>{toreads.map((toread) => {
                                 const link = `http://www.google.com/search?q=${toread}%20book`;
                                 return(
-                                    <li key={Math.floor(Math.random() * 10000) + 1}><a href={link} target="_blank">{toread}</a></li>
+                                    <li key={Math.floor(Math.random() * 10000) + 1}><a href={link} target="_blank" rel="noopener noreferrer">{toread}</a></li>
                                 )
                             })}
                                 {message ? <li>No search results.</li> : ''}
