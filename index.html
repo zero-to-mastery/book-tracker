@@ -5,33 +5,56 @@
 	<meta charset="UTF-8">
 	<title> Book Tracker System</title>
 	<link rel="shortcut icon" href="./media/book-tracker-icon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
+		<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+				  <!-- Brand and toggle get grouped for better mobile display -->
+				  <div class="navbar-header">
+					
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					
+					<a class="navbar-brand" href="#">Book Tracker</a>
+				  </div>
+			  
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+					  <li><a href="#">My Books</a></li>
+					  <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						  <li><a href="#">Top 10</a></li>
+						  <li><a href="#">Newly Released</a></li>
+						  <li><a href="#">Trending</a></li>
+						  <li role="separator" class="divider"></li>
+						  <li><a href="#">Newsletter</a></li>
+						  <li role="separator" class="divider"></li>
+						  <li><a href="#">Free Giveaways</a></li>
+						</ul>
+					  </li>
+					  <li><a href="login.html">Log in</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+					  <div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				  </div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			  </nav>
+			  
 	<div id="body_wrapper">
-
-		<div id="header">
-			<!-- Main Header -->
-			<img src="media/book-tracker-icon.png" alt="logo" id="logo">
-			<div class="menu-items">
-				<a href="" class="menu_item">HomePage</a>
-				<a href="" class="menu_item">Top 10</a>
-				<a href="" class="menu_item">Newly Released</a>
-				<a href="" class="menu_item">Your Books</a>
-				<a href="" class="menu_item">Free Giveaways</a>
-				<input type="search" class="inputBook" placeholder="Search new items">
-				<button class="btn btn-primary">Search</button>
-				<a href="login.html" class="menu_item ml-2">Log in </a>
-				<a href="newsletter.html" class="menu_item ml-2">Newsletter</a>
-
-				</div>
-			</div>
-		</div>
-
 		<div id="body">
 			<!-- Body Div -->
 			<h1 id="heading" class="animated pulse"> Welcome to Book Tracker 📖 </h1>
@@ -40,24 +63,20 @@
 			<h3 id="helperText">Add a book to get started!</h3>
 			<!-- User can record his book here -->
 			<div id="container">
-				<input class="inputBook" id="inputAuthor" type="text" name="inputAuthor" placeholder="📄 Author">
-				<input class="inputBook" type="text" name="inputBook" placeholder="📖 Book title">
-				<input class="inputBook" type="text" name="inputProgress" placeholder="📊 Progress">
-				<button class="btn btn-primary">Record</button>
+				<input class="inputBook" id="inputAuthor" type="text" name="inputAuthor" placeholder="📄 Author" required>
+				<input class="inputBook" id="inputTitle" type="text" name="inputBook" placeholder="📖 Book title" required>
+				<input class="inputBook" id="inputProgress" type="text" name="inputProgress" placeholder="📊 Progress">
+				<button id="record" class="btn btn-primary">Record</button>
 				<table>
-					<tr>
+					<thead>
 						<th>Title</th>
 						<th>Author</th>
 						<th>Progress</th>
-					</tr>
+					</thead>
+					
 				</table>
 			</div>
 		</div>
-
-
-
-
-
 	</div>
 	<!-- Main Body Wrapper Div Closed -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -65,10 +84,9 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	 crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-	 crossorigin="anonymous"></script>
+	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	 <script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 
 </body>
 

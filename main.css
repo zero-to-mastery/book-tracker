@@ -12,6 +12,9 @@
   --alt-color: #ffe28f;
   /*Light Brownish color*/
 }
+.navbar{
+  margin-bottom: 0;
+}
 
 * {
   margin: 0;
@@ -69,7 +72,6 @@
   grid-area: body;
   background-color: var(--body-color);
   height: 100vh;
-  padding: 25px;
   /*background: linear-gradient(to left, aliceblue, aquamarine);*/
   background: linear-gradient(to right, rgb(52, 119, 141), rgb(120, 153, 171));
 }
