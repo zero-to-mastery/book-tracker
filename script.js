@@ -1,64 +1,56 @@
+var button = document.getElementById("record");
+var authorInput = document.getElementById("inputAuthor");
+var titleInput = document.getElementById("inputTitle");
+var progressInput = document.getElementById("inputProgress");
+var table = document.querySelector("table");
+var clearButton = document.getElementById("clearbutton");
+var inputs =[titleInput,authorInput,progressInput];
 
-
-
-// MOCK DATABASE
-const table = document.querySelector("tbody");
-var database = [
-	{
-		title: "Name of the wind",
-		author: "Patrick Rothfuss",		
-		progress: "177" //removed 'p' so that page number is displayed properly
-	},
-	{
-		title: "Database Systems",
-		author: "Carlos Coronel, Stevent Morris",
-		progress: "Done"
-	},
-	{
-		title: "Secrets of the Oracle Database",
-		author: "Norbert Debes",
-		progress: "Unstarted"
-
-	},
-	{
-		title: "A Game of Thrones",
-		author: "George R.R. Martin",
-		progress: "350"
-	},
-	{
-		title: "Oathbringer",
-		author: "Brandon Sanderson",
-		progress: "Done"
-	},
-	{
-		title: "Harry Potter & The Order of the Phoenix",
-		author: "J.K. Rowling",
-		progress: "Done"
-	}
-
-];
-
-//Setting up the database
-function databaseUpdate(){
-	var newDb = database.map(item=>Object.values(item));
-
-	var trs = newDb.map(item=>{
-		var tdarray=item.map(val=>{
-			let td = document.createElement('td');
-			td.textContent = val; 
-			return td;
-		});
-		return tdarray;
-	})
-
-
-	trs.forEach(item=>{
-		var trow = document.createElement('tr');
-		item.forEach(val=>{
-			trow.appendChild(val);
-		})
-		table.appendChild(trow);
-	})
+const inputValue = () => {
+    if( titleInput== "" || authorInput == "" || progressInput ==""){
+        return false
+    }
+    return true
 }
-
-databaseUpdate();
+const createcell = (element) =>{
+    for (input of inputs){
+        switch (input){
+            case (authorInput):
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(authorInput.value))
+                element.appendChild(td);
+                break;
+            case (titleInput):
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(titleInput.value))
+                element.appendChild(td);
+                break;
+            case (progressInput):
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(progressInput.value))
+                element.appendChild(td);
+                break;
+            default:
+                alert(`${input} missing!`)
+                break;
+        }
+    }
+    return element
+}
+const clearInputs = () => {
+	authorInput.value="";
+	titleInput.value="";
+	progressInput.value="";
+}
+const addItem = () => {
+    var tr = document.createElement("tr");
+    tr = createcell(tr);
+	table.appendChild(tr);
+	clearInputs();
+}
+const addItemAfterClick = () => {
+    if (inputValue()){
+        addItem();
+    }
+}
+button.addEventListener("click", addItemAfterClick);
