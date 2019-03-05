@@ -43,3 +43,5 @@
 -   [@kwtoh](https://github.com/kwtoh)
 -   [@cmilios](https://github.com/cmilios)
 -   [@RinkuH](https://github.com/RinkuH)
+-   [@Drozanski](https://github.com/Drozanski)
+
