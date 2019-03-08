@@ -1,0 +1,9 @@
+.backart {
+	background: linear-gradient(to left, rgb(7, 27, 82,0.5) 0%, rgba(0, 128, 128, 1) 100%);
+	border-radius: 10px;
+	color: #fff;
+}
+.buttonSub {color: #fff; background: linear-gradient(to left, rgb(7, 27, 82,0.5) 0%, rgba(0, 128, 128, 1) 100%);}
+.buttonSub:hover {background: linear-gradient(to left, rgba(0, 128, 128, 1) 0%, rgb(7, 27, 82,0.5) 100%);}
+.inputTy {border: 1px solid #fff;}
+.inputTy:hover {border: 1px solid rgb(7, 27, 82,0.5);}

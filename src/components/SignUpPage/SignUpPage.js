@@ -27,10 +27,9 @@ class SignUpPage extends Component {
   onSubmitSignUp = () => {
   	
   }
-
   render() {
   	return (
-  		<article className="mw6 mt4 center">
+  		<article className="mw6 mt4 center shadow-5 p-5 backart">
 	  		<div className="measure">
 			    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
 			      <legend className="f3 fw6 ph0 mh0">Sign Up</legend>
@@ -38,7 +37,7 @@ class SignUpPage extends Component {
 			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Name</label>
 			        <input
 			        	onChange={this.onNameChange}
-			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
 			        	type="text" name="name" id="name"
 			        />
 			      </div>
@@ -46,7 +45,7 @@ class SignUpPage extends Component {
 			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
 			        <input
 			        	onChange={this.onEmailChange}
-			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
 			        	type="email" name="email-address" id="email-address"
 			        />
 			      </div>
@@ -54,7 +53,7 @@ class SignUpPage extends Component {
 			        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
 			        <input
 			        	onChange={this.onPasswordChange}
-				        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+				        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
 				        type="password" name="password" id="password"
 			        />
 			      </div>
@@ -70,7 +69,7 @@ class SignUpPage extends Component {
 			    <div className="">
 			      <input
 			      	onClick={this.onSubmitSignUp}
-			      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+			      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib buttonSub"
 			      	type="submit"
 			      	value="Sign up"
 			      />
