@@ -6,12 +6,7 @@ var table = document.querySelector("table");
 var clearButton = document.getElementById("clearbutton");
 var inputs =[titleInput,authorInput,progressInput];
 
-const inputValue = () => {
-    if( titleInput== "" || authorInput == "" || progressInput ==""){
-        return false
-    }
-    return true
-}
+const inputLength = (input => input.value.length); 
 const createcell = (element) =>{
     for (input of inputs){
         switch (input){
@@ -49,8 +44,9 @@ const addItem = () => {
 	clearInputs();
 }
 const addItemAfterClick = () => {
-    if (inputValue()){
+    if (inputLength(authorInput) > 0 && inputLength(titleInput) > 0 && inputLength(progressInput) > 0){
         addItem();
     }
 }
+
 button.addEventListener("click", addItemAfterClick);
