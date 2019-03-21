@@ -132,6 +132,10 @@ table th,table td{
   padding:5px 10px;
 }
 
+table th{
+  background-color:rgb(183, 183, 199, 0.8);
+}
+
 table td{
   padding:2px 5px;
 }
