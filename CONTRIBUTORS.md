@@ -45,3 +45,4 @@
 -   [@RinkuH](https://github.com/RinkuH)
 -   [@Drozanski](https://github.com/Drozanski)
 -   [@Andreycs](https://github.com/Andreycs)
+-	[@PaolaArz](https://github.com/PaolaArz)
