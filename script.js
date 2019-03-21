@@ -49,4 +49,11 @@ const addItemAfterClick = () => {
     }
 }
 
+const addItemAfterEnter = () => {
+    if (inputLength(authorInput) > 0 && inputLength(titleInput) > 0 && inputLength(progressInput) > 0 && event.keyCode === 13){
+        addItem();
+    }
+}
+
 button.addEventListener("click", addItemAfterClick);
+inputProgress.addEventListener("keypress", addItemAfterEnter);
