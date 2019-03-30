@@ -138,3 +138,19 @@ form  {
     }
   }
 
+  .mb-4{
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+body,html{
+  width:100%;
+  height: 100%;
+  margin: 0;
+}
+body{
+    background-image: url('media/book.jpeg');
+  background-size:cover;
+  height: 100%;
+  background-position: center;
+}
