@@ -1,3 +1,18 @@
+.navigation {
+    background-color: rgb(44, 27, 2);
+    box-shadow: 0 10px 20px rgba(32, 32, 32, 0.77);
+}
+
+.nav-link {
+    padding: 300px;
+    transition: 500ms;
+}
+
+.nav-link:hover {
+    background-color: rgb(112, 185, 154);
+    border-radius: 30px;
+  }
+
 a {
     color: var(--link-color);
 }

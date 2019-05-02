@@ -26,15 +26,12 @@ export default class TopNavbar extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navbar color="dark" dark expand="md">
+            <div className="navigation">
+                <Navbar className="navbar navbar-inverse bg-inverse ma pa4" expand="md">
                     <NavbarBrand tag={Link} to="/">Book Tracker</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
-                                <NavLink className='nav-active-style' tag={Link} to="/"> Home</NavLink>
-                            </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} to="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</NavLink>
                             </NavItem>
