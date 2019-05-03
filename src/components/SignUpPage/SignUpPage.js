@@ -26,58 +26,55 @@ class SignUpPage extends Component {
 
   onSubmitSignUp = () => {
   	
-  }
+	}
+	
   render() {
   	return (
-  		<article className="mw6 mt4 center shadow-5 p-5 backart">
-	  		<div className="measure">
-			    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-			      <legend className="f3 fw6 ph0 mh0">Sign Up</legend>
-			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Name</label>
-			        <input
-			        	onChange={this.onNameChange}
-			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
-			        	type="text" name="name" id="name"
-			        />
-			      </div>
-			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-			        <input
-			        	onChange={this.onEmailChange}
-			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
-			        	type="email" name="email-address" id="email-address"
-			        />
-			      </div>
-			      <div className="mv3">
-			        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-			        <input
-			        	onChange={this.onPasswordChange}
-				        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
-				        type="password" name="password" id="password"
-			        />
-			      </div>
-			      {
+			<div>
+					<form className="form-container">
+						<h2>Sign Up</h2>
+								<input
+									onChange={this.onNameChange}
+									className=""
+									type="name" 
+									name="name" 
+									id="name"
+									placeholder="Name"
+								/>
+								<input
+									onChange={this.onEmailChange}
+									className=""
+									type="email"
+									name="email-address" 
+									id="email-address"
+									placeholder="Email"
+								/>
+									<input
+										onChange={this.onPasswordChange}
+										className=""
+										type="password" 
+										name="password" 
+										id="password"
+										placeholder="Password"
+									/>
+							{
 			      	this.state.isFailed ?
 				      	<pre className="alert alert-danger">
-						    	Failed Registerring Account
+						    	Failed Registering Account
 						    </pre>
 							:
 								<pre></pre>
-			      }
-			    </fieldset>
-			    <div className="">
-			      <input
-			      	onClick={this.onSubmitSignUp}
-			      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib buttonSub"
-			      	type="submit"
-			      	value="Sign up"
-			      />
-			    </div>
-			  </div>
-			</article>
-  	);
-  }
+			     		}
+							<button 
+								className="grow" 
+								onClick={this.onSubmitSignUp}>Register
+							</button>
+					
+			</form>
+			</div>  	
+	);
+}  
+
 }
 
 export default SignUpPage;
