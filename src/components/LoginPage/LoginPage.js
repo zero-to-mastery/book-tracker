@@ -26,26 +26,24 @@ class LoginPage extends Component {
 
   render() {
   	return (
-  		<article className="mw6 mt4 center shadow-5 p-5 backart">
-	  		<div className="measure">
-			    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-			      <legend className="f3 fw6 ph0 mh0">Login</legend>
-			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+  		<form className="form-container">
+			     <h2>Login</h2>
 			        <input
 			        	onChange={this.onEmailChange}
-			        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
-			        	type="email" name="email-address" id="email-address"
+			        	className=""
+								type="email" 
+								name="email-address" 
+								id="email-address"
+								placeholder="Email"
 			        />
-			      </div>
-			      <div className="mv3">
-			        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-			        <input
-			        	onChange={this.onPasswordChange}
-				        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100 inputTy"
-				        type="password" name="password" id="password"
-			        />
-			      </div>
+			          <input
+									onChange={this.onPasswordChange}
+									className=""
+									type="password" 
+									name="password" 
+									id="password"
+									placeholder="Password"
+								/>
 			      {
 			      	this.state.isFailed ?
 				      	<pre className="alert alert-danger">
@@ -54,17 +52,11 @@ class LoginPage extends Component {
 							:
 								<pre></pre>
 			      }
-			    </fieldset>
-			    <div className="">
-			      <input
-			      	onClick={this.onSubmitLogin}
-			      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib buttonSub"
-			      	type="submit"
-			      	value="Login"
-			      />
-			    </div>
-			  </div>
-			</article>
+						<button 
+							className="grow" 
+							onClick={this.onSubmitLogin}>Sign In
+						</button>
+			</form>
   	);
   }
 }
