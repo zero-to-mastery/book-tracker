@@ -33,13 +33,13 @@ export default class TopNavbar extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink tag={Link} to="/wish-list" className="nav-link white underline pa3 pointer">Books WishList</NavLink>
+                                <NavLink tag={Link} to="/wish-list" className="nav-link white underline pa4 pointer">Books WishList</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} to="/currentlist" className='nav-active-style'>Reading List</NavLink>
+                                <NavLink tag={Link} to="/currentlist" className='nav-active-style pa4'>Reading List</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} to="/add" className="nav-link white underline pa3 pointer" value="Add Book">Add Book</NavLink>
+                                <NavLink tag={Link} to="/add" className="nav-link white underline pa4" value="Add Book">Add Book</NavLink>
                             </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
