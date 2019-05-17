@@ -12,14 +12,18 @@
   --alt-color: #ffe28f;
   /*Light Brownish color*/
 }
-.navbar{
+
+.navbar {
   margin-bottom: 0;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  font-family:'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #body_wrapper {
@@ -27,9 +31,8 @@
   height: 100%;
   width: 100%;
   grid-auto-columns: repeat(6, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header header header header header header"
+  grid-template-rows: repeat (3, auto);
+  grid-template-areas: "header header header header header header"
     "body body body body body body"
     "footer footer footer footer footer footer";
 }
@@ -114,35 +117,40 @@ input {
   color: #007bff;
 }
 
-table{
-  margin:40px auto;
-  width:70%;
-  background-color:rgba(250,250,250,0.9);
-  border:1px solid black;
+table {
+  margin: 40px auto;
+  width: 70%;
+  background-color: rgba(250, 250, 250, 0.9);
+  border: 1px solid black;
 }
-tr{
+
+tr {
   text-align: left;
 }
-table,th,td {
-  border-collapse:collapse;
+
+table,
+th,
+td {
+  border-collapse: collapse;
 }
 
-table th,table td{
-  border:1px solid black;
-  padding:5px 10px;
+table th,
+table td {
+  border: 1px solid black;
+  padding: 5px 10px;
 }
 
-table th{
-  background-color:rgb(183, 183, 199, 0.8);
+table th {
+  background-color: rgb(183, 183, 199, 0.8);
 }
 
-table td{
-  padding:2px 5px;
+table td {
+  padding: 2px 5px;
 }
 
 
 /**********Animate.css**********/
-@charset "UTF-8";
+
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -3679,4 +3687,3 @@ table td{
   padding: 10px;
   width: 250px;
 }
-
