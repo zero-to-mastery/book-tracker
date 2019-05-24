@@ -44,15 +44,20 @@ const addItem = () => {
 	clearInputs();
 }
 const addItemAfterClick = () => {
-    if (inputLength(authorInput) > 0 && inputLength(titleInput) > 0 && inputLength(progressInput) > 0){
+    if (inputLengthCheck(inputs)){
         addItem();
     }
 }
 
 const addItemAfterEnter = () => {
-    if (inputLength(authorInput) > 0 && inputLength(titleInput) > 0 && inputLength(progressInput) > 0 && event.keyCode === 13){
+    if (inputLengthCheck(inputs) && event.keyCode == 13){
         addItem();
     }
+}
+
+const inputLengthCheck = (array) => {
+    let checkArray = array.filter((value) => inputLength(value)<1);
+    return (checkArray.length>0 ? false : true)
 }
 
 button.addEventListener("click", addItemAfterClick);
