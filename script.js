@@ -62,6 +62,5 @@ const inputLengthCheck = (array) => {
 }
 
 
-}
 button.addEventListener("click", addItemAfterClick);
 inputProgress.addEventListener("keypress", addItemAfterEnter);
