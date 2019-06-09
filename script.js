@@ -1,10 +1,12 @@
 var button = document.getElementById("record");
 var authorInput = document.getElementById("inputAuthor");
 var titleInput = document.getElementById("inputTitle");
+var startDateInput = document.getElementById("inputStartDate");
+var finishedDateInput = document.getElementById("inputFinishedDate");
 var progressInput = document.getElementById("inputProgress");
 var table = document.querySelector("table");
 var clearButton = document.getElementById("clearbutton");
-var inputs =[titleInput,authorInput,progressInput];
+var inputs =[titleInput,authorInput,startDateInput,finishedDateInput,progressInput];
 
 
 const inputLength = (input => input.value.length); 
@@ -19,6 +21,16 @@ const createcell = (element) =>{
             case (titleInput):
                 var td = document.createElement("td");
                 td.appendChild(document.createTextNode(titleInput.value))
+                element.appendChild(td);
+                break;
+            case (startDateInput):
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(startDateInput.value))
+                element.appendChild(td);
+                break;
+            case (finishedDateInput):
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(finishedDateInput.value))
                 element.appendChild(td);
                 break;
             case (progressInput):

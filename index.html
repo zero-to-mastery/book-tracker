@@ -114,6 +114,24 @@
           />
           <input
             class="inputBook"
+            id="inputStartDate"
+            type="text"
+            onfocus="(this.type='date')"
+            name="inputStartDate"
+            placeholder="📅 Start Date"
+            required
+          />
+          <input
+            class="inputBook"
+            id="inputFinishedDate"
+            type="text"
+            onfocus="(this.type='date')"
+            name="inputFinishedDate"
+            placeholder="🗓 Finished Date"
+            required
+          />
+          <input
+            class="inputBook"
             id="inputProgress"
             type="text"
             name="inputProgress"
@@ -124,6 +142,8 @@
             <thead>
               <th>Title</th>
               <th>Author</th>
+              <th>Start Date</th>
+              <th>Finished Date</th>
               <th>Progress</th>
             </thead>
           </table>
