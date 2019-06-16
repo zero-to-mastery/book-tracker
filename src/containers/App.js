@@ -17,7 +17,6 @@ class App extends Component {
     render() {
         return (
             <div>
-                <HomeNavbar/>
                 <TopNavbar/>
                 <Switch>
                     <Route path="/" exact component={HomePage} />
