@@ -58,3 +58,4 @@
 -   [@cscheffauer](https://github.com/cscheffauer)
 -   [@iqbalhussainkhan](https://github.com/iqbalhussainkhan)
 -   [@alonjoshua](https://github.com/alonjoshua)
+-   [@dioz95](https://github.com/dioz95/)
