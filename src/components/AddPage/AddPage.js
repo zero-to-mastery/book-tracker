@@ -4,7 +4,7 @@ import './AddPage.css';
 class AddPage extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             toreadInit: ['Game of Thrones', 'Harry Potter', 'Lord of the Rings'],
             toreads: [],
             toreadText: '',
@@ -64,9 +64,9 @@ class AddPage extends Component {
 
         return (
             <div>
-                <div className="containter top">
+                <div className="container top">
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 mt-3">
                             <h2 className="tc">Add a Book</h2>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ class AddPage extends Component {
                 <div className="container wb">
                     <div className="row">
                         <div className="booklist">
-                            <h2>Book List</h2>
+                            <h2 className="tc">Book List</h2>
                             <ul>{toreads.map((toread) => {
                                 const link = `http://www.google.com/search?q=${toread}%20book`;
                                 return(
@@ -86,11 +86,11 @@ class AddPage extends Component {
                         </div>
                         <div className="bookadd">
                             <form onSubmit={this.createToread}>
-                                <div className='col-lg-12 input-group'>
+                                <div className='row input-group'>
                                     <input type="text" className="center-block"
-                                        placeholder="Book Name"
-                                        value={toreadText}
-                                        onChange={this.updateToreadText} />
+                                           placeholder="Book Name"
+                                           value={toreadText}
+                                           onChange={this.updateToreadText} />
                                     <button className="btn btn-success center-block">Add</button>
                                 </div>
                             </form>
