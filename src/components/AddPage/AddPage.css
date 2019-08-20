@@ -54,9 +54,15 @@ h1 {
 .booklist > ul > li a:hover {
   font-size: 30px;
 }
-
+.booklist{
+    width: 80%;
+    margin-right: auto;
+}
 .bookadd {
-  margin-left: auto;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 100px;
+
 }
     
     

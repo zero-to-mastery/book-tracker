@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
 import './App.css';
-
-
 import TopNavbar from '../components/TopNavbar/TopNavbar';
 import AddPage from '../components/AddPage/AddPage';
 import LoginPage from '../components/LoginPage/LoginPage';
