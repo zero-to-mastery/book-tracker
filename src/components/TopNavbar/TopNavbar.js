@@ -27,7 +27,7 @@ export default class TopNavbar extends React.Component {
     render() {
         return (
             <div className="navigation">
-                <Navbar className="navbar navbar-dark ma pa1-sm" expand="md">
+                <Navbar className="navbar navbar-dark ma" expand="md">
                     <NavbarBrand tag={Link} to="/">Book Tracker</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
