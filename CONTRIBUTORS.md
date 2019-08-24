@@ -64,3 +64,4 @@
 -   [@liamez](https://github.com/liamez/)
 -   [@ChrRepou](https://github.com/ChrRepou)
 -   [@ab-bh](https://github.com/ab-bh)
+-   [@kpence](http://github.com/kpence)
