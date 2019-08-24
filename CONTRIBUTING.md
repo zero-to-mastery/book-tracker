@@ -4,4 +4,3 @@
 
 To learn how to add your name to this project's contributor list, you can get started <a href="https://github.com/zero-to-mastery/start-here-guidelines"> here </a>.
 
-[@kpence](http://github.com/kpence)
