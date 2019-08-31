@@ -47,7 +47,7 @@
 -   [@Andreycs](https://github.com/Andreycs)
 -	  [@PaolaArz](https://github.com/PaolaArz)
 -   [@umarsajjad1992](https://github.com/umarsajjad1992)
--   [@naveen-ku](https://github.com/naveen-ku) 
+-   [@naveen-ku](https://github.com/naveen-ku)
 -   [@iavitia](https://github.com/iavitia)
 -   [@Maryghasemiau](https://github.com/Maryghasemiau)
 -   [@Vectormike40](https://github.com/Vectormike40)
@@ -67,3 +67,4 @@
 -   [@krylenger](https://github.com/krylenger)
 -   [@krylenger](https://github.com/krylenger)
 -   [@kpence](http://github.com/kpence)
+-   [@Aradhya-B](http://github.com/Aradhya-B)
