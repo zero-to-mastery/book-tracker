@@ -27,6 +27,16 @@ form  {
     padding: .8rem .8rem;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 16px;
+}
+
+#goback {
+ display: inline-block;
+}
+
 /* Bubble animation*/
 .bg-bubbles {
     position: absolute;
