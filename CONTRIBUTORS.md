@@ -2,6 +2,7 @@
 -   [@restull5](https://github.com/restull5)
 -   [@amagonzalez27](https://github.com/amagonzalez27)
 -   [@Manvi-Agrawal](https://github.com/Manvi-Agrawal)
+-   [@alexacoronel](https://github.com/alexacoronel)
 -   [@BiswaViraj](https://github.com/BiswaViraj)
 -   [@mado-is-here](https://github.com/mado-is-here)
 -   [@stefananlam](https://github.com/stefananlam)
