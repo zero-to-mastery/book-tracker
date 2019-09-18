@@ -79,6 +79,10 @@
   background: linear-gradient(to right, rgb(52, 119, 141), rgb(120, 153, 171));
 }
 
+#title {
+  font-size:  60px;
+}
+
 #heading {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
