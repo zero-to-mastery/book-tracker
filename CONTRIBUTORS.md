@@ -75,4 +75,4 @@
 -   [@mscchapagain](http://github.com/mscchapagain)
 -   [@smartglaxx](http://github.com/smartglaxx)
 -   [@EiraBell](http://github.com/EiraBell)
-- 	[@t-dave]http://github.com/t-dave()
+- 	[@t-dave](http://github.com/t-dave)
