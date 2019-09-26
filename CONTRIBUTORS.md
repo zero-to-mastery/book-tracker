@@ -46,7 +46,7 @@
 -   [@RinkuH](https://github.com/RinkuH)
 -   [@Drozanski](https://github.com/Drozanski)
 -   [@Andreycs](https://github.com/Andreycs)
--	[@PaolaArz](https://github.com/PaolaArz)
+-	  [@PaolaArz](https://github.com/PaolaArz)
 -   [@umarsajjad1992](https://github.com/umarsajjad1992)
 -   [@naveen-ku](https://github.com/naveen-ku)
 -   [@iavitia](https://github.com/iavitia)
@@ -75,4 +75,6 @@
 -   [@mscchapagain](http://github.com/mscchapagain)
 -   [@smartglaxx](http://github.com/smartglaxx)
 -   [@inkerina](http://github.com/inkerina)
-
+-   [@EiraBell](http://github.com/EiraBell)
+- 	[@t-dave](http://github.com/t-dave)
+-   [@aerinc](http://github.com/aerinc)
