@@ -74,6 +74,7 @@
 -   [@Jalal-Eddine](http://github.com/Jalal-Eddine)
 -   [@mscchapagain](http://github.com/mscchapagain)
 -   [@smartglaxx](http://github.com/smartglaxx)
+-   [@inkerina](http://github.com/inkerina)
 -   [@EiraBell](http://github.com/EiraBell)
 - 	[@t-dave](http://github.com/t-dave)
 -   [@aerinc](http://github.com/aerinc)
