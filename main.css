@@ -17,6 +17,17 @@
   margin-bottom: 0;
 }
 
+.navbar-nav{
+    float: left;
+}
+
+.img-responsive{
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
+
 *,
 *::before,
 *::after {
@@ -3691,6 +3702,7 @@ table td {
 #container {
   text-align: center;
   margin: 20px;
+  left: 50%;
 }
 
 .inputBook {
