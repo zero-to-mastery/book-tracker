@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import userRoute from './routes/user-route';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -19,6 +20,8 @@ mongoose.connect(
         useUnifiedTopology: true
     },
     () => console.log('connected to db!'));
+
+app.use('/api/auth', userRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
