@@ -82,3 +82,4 @@
 -   [@mwheatfill](https://github.com/mwheatfill)
 -   [@Liddell-Ironfoot](https://github.com/Liddell-IronFoot)
 -   [@iphyokafor](https://github.com/iphyokafor)
+-   [@agilestrings](https://github.com/agilestrings)
