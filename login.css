@@ -6,14 +6,19 @@ body{
     overflow: hidden;
 }
 #logwrapper {
-  position: absolute;
-  top : 25%;
+  position: relative;
+  top : 100px;
   width: 100%;
   height: auto;
   font-size: 20px;
  font-family: "Source Sans Pro", sans-serif;
  font-weight: 300;
 }
+
+/* .wrapper-main {
+  position: absolute;
+} */
+
 input::placeholder {
     font-size: 20px;
     font-family: "Source Sans Pro", sans-serif;
