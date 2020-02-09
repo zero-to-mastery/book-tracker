@@ -1,13 +1,7 @@
 import Joi from 'joi';
 
-const registerValidation = (data) => {
+const loginValidation = (data) => {
     const schema = Joi.object({
-        name: Joi.string()
-            .min(2)
-            .max(50)
-            .trim()
-            .lowercase()
-            .required(),
         email: Joi.string()
             .email()
             .regex(/\S+@\S+\.\S+/)
@@ -24,5 +18,4 @@ const registerValidation = (data) => {
 };
 
 
-
-export default registerValidation;
+export default loginValidation;
