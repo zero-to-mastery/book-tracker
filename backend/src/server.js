@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import userRoute from './routes/user-route';
+import bookRoute from './routes/book-route';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose.connect(
     () => console.log('connected to db!'));
 
 app.use('/api/auth', userRoute);
+app.use('/', bookRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
