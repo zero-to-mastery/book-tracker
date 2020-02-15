@@ -19,10 +19,14 @@ mongoose.connect(
         useNewUrlParser: true,
         useUnifiedTopology: true
     },
-    () => console.log('connected to db!'));
+    (err) => {
+        if (err) throw err;
+        else console.log('connected to db!')
+    });
 
 app.use('/api/auth', userRoute);
 app.use('/', bookRoute);
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

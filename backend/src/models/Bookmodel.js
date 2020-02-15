@@ -12,11 +12,7 @@ const bookSchema = mongoose.Schema({
         required: true,
         min: 2,
         max: 100
-    },
-    date: {
-        type: Date,
-        default: Date.now
     }
-});
+}, { timestamps: true });
 
 export default mongoose.model('books', bookSchema);
