@@ -1,9 +1,8 @@
-import books from '../models/Bookmodel';
-import express from 'express';
+import Book from '../models/Bookmodel';
 
 export default {
     addBook: async(req, res) => {
-        const book = new books({
+        const book = new Book({
             title: req.body.title,
             author: req.body.author
         });
@@ -19,6 +18,33 @@ export default {
             res.json({
                 message: err
             });
+        }
+    },
+
+    getAllBooks: async(req, res) => {
+        try {
+            const getbooks = await Book.find({});
+            return res.json({
+                message: 'View all books',
+                getbooks
+            });
+
+        } catch (err) {
+            return res.json({
+                message: err
+            });
+        }
+    },
+
+    getOneBook: async(req, res) => {
+        try {
+            const book = await Book.findById(req.params.bookId);
+            return res.status(200).json(book);
+
+        } catch (err) {
+            res.json({
+                message: err
+            })
         }
     }
 }
