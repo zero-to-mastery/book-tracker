@@ -2,6 +2,14 @@ import Book from '../models/Bookmodel';
 
 export default {
     addBook: async(req, res) => {
+        const { title } = req.body;
+        const titleExist = await Book.findOne({ title });
+        if (titleExist) {
+            return res.status(400).json({
+                message: 'Book already exists'
+            });
+        }
+
         const book = new Book({
             title: req.body.title,
             author: req.body.author
@@ -9,7 +17,7 @@ export default {
 
         try {
             const savedBook = await book.save();
-            res.status(201).json({
+            return res.status(201).json({
                 message: 'Book has been added successfully',
                 savedBook
             });
@@ -40,6 +48,21 @@ export default {
         try {
             const book = await Book.findById(req.params.bookId);
             return res.status(200).json(book);
+
+        } catch (err) {
+            res.json({
+                message: err
+            })
+        }
+    },
+
+    updateBook: async(req, res) => {
+        try {
+            const updatedBook = await Book.updateOne({ _id: req.params.bookId }, { $set: { title: req.body.title, author: req.body.author } });
+            return res.status(201).json({
+                message: 'Book Updated',
+                updatedBook
+            });
 
         } catch (err) {
             res.json({
