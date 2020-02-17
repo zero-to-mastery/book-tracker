@@ -69,5 +69,19 @@ export default {
                 message: err
             })
         }
+    },
+
+    deleteBook: async(req, res) => {
+        try {
+            const removedBook = await Book.deleteOne({ _id: req.params.bookId });
+            return res.status(201).json({
+                message: 'Book deleted',
+                removedBook
+            });
+        } catch (err) {
+            res.json({
+                message: err
+            })
+        }
     }
 }
