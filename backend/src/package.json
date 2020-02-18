@@ -5,17 +5,22 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon -r esm server.js"
+        "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+        "start:prod": "node server.js",
+        "start:dev": "concurrently \"nodemon -r esm server.js --ignore 'client/*'\" \"npm run client\"",
+        "client": "cd ../.. && npm run start"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
+        "concurrently": "^5.1.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "esm": "^3.2.25",
         "express": "^4.17.1",
+        "if-env": "^1.0.4",
         "joi": "^14.3.1",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.8.11",
