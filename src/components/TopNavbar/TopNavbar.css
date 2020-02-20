@@ -4,14 +4,14 @@
 }
 
 .nav-link {
-    padding: 20px;
+    padding: 7.5px 20px;
     transition: 500ms;
     text-decoration: none;
 }
 
 .nav-link:hover {
-    background-color: #332e44;
-    border-radius: 20px;
+    background-color: #493e6d;
+    border-radius: 2px;
 }
 
 
