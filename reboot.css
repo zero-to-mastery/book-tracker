@@ -1,3 +1,11 @@
 .navbar {
-    padding: 10px;
+    padding: 10px 3rem;
+}
+
+.navbar > ul {
+    padding-left: 330px;
+}
+
+#searchField {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
