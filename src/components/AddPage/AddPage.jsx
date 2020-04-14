@@ -85,7 +85,7 @@ class AddPage extends Component {
               />
             </div>
             <div className='form-group'>
-              <label htmlFor='author'>Enter the book's title:</label>
+              <label htmlFor='author'>Enter the book's author:</label>
               <input
                 type='text'
                 name='author'
