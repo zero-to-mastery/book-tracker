@@ -1,44 +1,17 @@
-.mainContent {
-  margin-top: 5%;
-}
-
-h1 {
-  padding-bottom: 20px;
-}
-
-.table thead {
-  background: var(--primary-color);
-  font-weight: bold;
-}
-
-.btn-basic{
-  background: var(--primary-color);
-
-}
-
-.booklist > h2 {
-  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+.book-list > h2 {
   border-bottom: 3px solid black;
 }
 
-.booklist > ul {
+.book-list > ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-.booklist > ul > li {
+.book-list > ul > li {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
 
-.booklist > ul > li:last-child {
-  border: none;
-}
-
-.booklist > ul > li a {
+.book-list > ul > li a {
   text-decoration: none;
   color: #000;
   display: block;
@@ -51,18 +24,11 @@ h1 {
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
-.booklist > ul > li a:hover {
+.book-list > ul > li a:hover {
   font-size: 30px;
 }
-.booklist{
-    width: 80%;
-    margin-right: auto;
-}
-.bookadd {
-    width: 100%;
-    padding-left: 50px;
-    padding-top: 100px;
 
+.add-book > h2,
+.book-list > h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
 }
-    
-    
