@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
+import { getBooks } from '../../services/default-books.service.js';
 import './AddPage.css';
 import '../GridLayout/GridLayout';
 
 class AddPage extends Component {
   state = {
-    books: [
-      {
-        id: 1,
-        title: 'Game of Thrones',
-        author: 'George R. R. Martin',
-      },
-      {
-        id: 2,
-        title: "Harry Potter and the Sorcerer's Stone",
-        author: 'J.K Rowling',
-      },
-      {
-        id: 3,
-        title: 'Lord of the Rings',
-        author: 'J.R.R. Tolkien',
-      },
-    ],
+    books: [],
     message: false,
   };
+
+  componentDidMount() {
+    const defaultBooks = getBooks();
+    fetch('http://localhost:5000/books')
+      .then((res) => res.json())
+      .then((data) => this.setState({ books: data }))
+      .catch(this.setState({ books: defaultBooks }));
+  }
 
   handleChange = (e) => {
     const { value, name } = e.target;
@@ -59,7 +52,7 @@ class AddPage extends Component {
             {books.map((book) => {
               const url = `http://www.google.com/search?q=${book.title}%20book`;
               return (
-                <li key={book.id || book.author}>
+                <li key={book.id || book.title}>
                   <a href={url} target='_blank' rel='noopener noreferrer'>
                     {book.title}
                   </a>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
 .form-container {
 	top: 0;
 	height: 100%;
@@ -7,16 +5,18 @@
 	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: rgb(84, 99, 194);	
+	background-color: #402626;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-				0 10px 10px rgba(0,0,0,0.22);				
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	place-items: center center;
 	overflow: hidden;
 	width: 568px;
 	max-width: 100%;
 	min-height: 480px;
+}
 
+h2 {
+	color: #fff;
 }
 
 form {
@@ -39,20 +39,18 @@ input {
 	width: 100%;
 }
 
-
 a {
-	color: ##885a5a;
+	color: #885a5a;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
+	border: 1px solid #ff4b2b;
+	background-color: #ff4b2b;
+	color: #ffffff;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -66,8 +64,7 @@ button:hover {
 	background-color: rgb(231, 43, 9);
 	border: 1px solid rgb(231, 43, 9);
 	-moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    transition: transform .25s ease-out;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: transform 0.25s ease-out;
 }
-

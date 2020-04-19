@@ -6,59 +6,71 @@ class LoginPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-    	loginEmail: '',
-    	loginPassword: '',
-    	isFailed: false
-    }
+			data: {
+				email: '',
+				password: '',
+			},
+			error: {},
+		};
 	}
 
-	onEmailChange = (event) => {
-  	this.setState({ loginEmail: event.target.value });
-  }
+	handleChange = event => {
+		const { value, name } = event.target;
+		const data = { ...this.state.data, [name]: value };
 
-  onPasswordChange = (event) => {
-  	this.setState({ loginPassword: event.target.value });
-  }
+		this.setState({ data });
+	};
 
-  onSubmitLogin = () => {
-  	
-  }
+	handleSubmit = async e => {
+		e.preventDefault();
 
-  render() {
-  	return (
-  		<form className="form-container">
-			     <h2>Login</h2>
-			        <input
-			        	onChange={this.onEmailChange}
-			        	className=""
-								type="email" 
-								name="email-address" 
-								id="email-address"
-								placeholder="Email"
-			        />
-			          <input
-									onChange={this.onPasswordChange}
-									className=""
-									type="password" 
-									name="password" 
-									id="password"
-									placeholder="Password"
-								/>
-			      {
-			      	this.state.isFailed ?
-				      	<pre className="alert alert-danger">
-						    	Wrong Email/Password
-						    </pre>
-							:
-								<pre></pre>
-			      }
-						<button 
-							className="grow" 
-							onClick={this.onSubmitLogin}>Sign In
-						</button>
+		const { email, password } = this.state.data;
+
+		async function login(email, password) {
+			await fetch('http://localhost:5000/api/auth/login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ email, password }),
+			})
+				.then(res => res.json())
+				.then(data => localStorage.setItem('token', data.token))
+				.catch(error => console.error(error));
+		}
+
+		await login(email, password);
+	};
+
+	render() {
+		return (
+			<form onSubmit={this.handleSubmit} className='form-container'>
+				<h2>Login</h2>
+				<input
+					onChange={this.handleChange}
+					className=''
+					type='email'
+					name='email'
+					id='email-address'
+					placeholder='Email'
+				/>
+				<input
+					onChange={this.handleChange}
+					className=''
+					type='password'
+					name='password'
+					id='password'
+					placeholder='Password'
+				/>
+				{this.state.isFailed ? (
+					<pre className='alert alert-danger'>Wrong Email/Password</pre>
+				) : (
+					<pre></pre>
+				)}
+				<button>Sign In</button>
 			</form>
-  	);
-  }
+		);
+	}
 }
 
 export default LoginPage;

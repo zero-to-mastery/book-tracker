@@ -1,71 +1,76 @@
 import React, { Component } from 'react';
 
 class SignUpPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      registerName: '',
-      registerEmail: '',
-      registerPassword: '',
-      isFailed: false,
-    };
-  }
+	state = {
+		data: { name: '', email: '', password: '', confirmPassword: '' },
+		errors: {},
+	};
 
-  onNameChange = (event) => {
-    this.setState({ registerName: event.target.value });
-  };
+	handleChange = e => {
+		const { name, value } = e.target;
+		const data = { ...this.state.data, [name]: value };
 
-  onEmailChange = (event) => {
-    this.setState({ registerEmail: event.target.value });
-  };
+		this.setState({ data });
+	};
 
-  onPasswordChange = (event) => {
-    this.setState({ registerPassword: event.target.value });
-  };
+	handleSubmit = async e => {
+		e.preventDefault();
+		const { name, email, password, confirmPassword } = this.state.data;
 
-  onSubmitSignUp = () => {};
+		if (password !== confirmPassword) return alert("Password dont' match");
 
-  render() {
-    return (
-      <div>
-        <form className='form-container'>
-          <h2>Sign Up</h2>
-          <input
-            onChange={this.onNameChange}
-            className=''
-            type='name'
-            name='name'
-            id='name'
-            placeholder='Name'
-          />
-          <input
-            onChange={this.onEmailChange}
-            className=''
-            type='email'
-            name='email-address'
-            id='email-address'
-            placeholder='Email'
-          />
-          <input
-            onChange={this.onPasswordChange}
-            className=''
-            type='password'
-            name='password'
-            id='password'
-            placeholder='Password'
-          />
-          {this.state.isFailed ? (
-            <pre className='alert alert-danger'>Failed Registering Account</pre>
-          ) : (
-            <pre></pre>
-          )}
-          <button className='grow' onClick={this.onSubmitSignUp}>
-            Register
-          </button>
-        </form>
-      </div>
-    );
-  }
+		try {
+			await fetch('http://localhost:5000/api/auth/signup', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ name, email, password }),
+			});
+		} catch (error) {
+			console.error(error);
+			if (error && error.respose.status === 400) {
+				const errors = { ...this.state.errors };
+				errors.name = error.response.data;
+				this.setState({ errors });
+			}
+		}
+	};
+
+	render() {
+		return (
+			<form onSubmit={this.handleSubmit} className='form-container'>
+				<h2>Sign Up</h2>
+				<input
+					onChange={this.handleChange}
+					type='text'
+					name='name'
+					id='name'
+					placeholder='Name'
+				/>
+				<input
+					onChange={this.handleChange}
+					type='email'
+					name='email'
+					id='email'
+					placeholder='Email'
+				/>
+				<input
+					onChange={this.handleChange}
+					type='password'
+					name='password'
+					id='password'
+					placeholder='Password'
+				/>
+				<input
+					onChange={this.handleChange}
+					type='password'
+					name='confirmPassword'
+					id='password'
+					placeholder='Password'
+				/>
+				<button>Register</button>
+			</form>
+		);
+	}
 }
 
 export default SignUpPage;
