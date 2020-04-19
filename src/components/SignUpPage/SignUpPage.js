@@ -25,6 +25,8 @@ class SignUpPage extends Component {
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ name, email, password }),
 			});
+
+			window.location = '/';
 		} catch (error) {
 			console.error(error);
 			if (error && error.respose.status === 400) {

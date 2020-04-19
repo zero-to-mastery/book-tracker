@@ -9,6 +9,7 @@ import LoginPage from '../components/LoginPage/LoginPage';
 import SignUpPage from '../components/SignUpPage/SignUpPage';
 import HomePage from './HomePage';
 import WishListPage from './WishListPage';
+import Logout from '../components/Logout';
 
 class App extends Component {
 	state = {
@@ -29,8 +30,9 @@ class App extends Component {
 						<Route path='/' exact component={HomePage} />
 						<Route path='/wish-list' exact component={WishListPage} />
 						<Route path='/add' exact component={AddPage} />
-						<Route path='/login' exact component={LoginPage} />
 						<Route path='/signup' exact component={SignUpPage} />
+						<Route path='/login' exact component={LoginPage} />
+						<Route path='logout' component={Logout} />
 					</Switch>
 				</main>
 			</div>
