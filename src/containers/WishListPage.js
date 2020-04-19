@@ -6,19 +6,21 @@ import SidebarTotals from '../components/SidebarTotals/SidebarTotals';
 import WishList from '../components/WishList/WishList';
 
 class WishListPage extends Component {
-    render() {
-        return (
-            <GridLayout>
-                <SidebarTotals cbData={this.props.currentBooks} wlData={this.props.bookWishList}/>
-                <WishList data={this.props.bookWishList}/>
-            </GridLayout>
-        );
-    }
+	render() {
+		const { currentBooks, bookWishList } = this.props;
+
+		return (
+			<GridLayout>
+				<SidebarTotals cbData={currentBooks} wlData={bookWishList} />
+				<WishList data={bookWishList} />
+			</GridLayout>
+		);
+	}
 }
 
 const mapPropsToState = state => ({
-    currentBooks: state.books.books,
-    bookWishList: state.wishList.wishList
+	currentBooks: state.books.books,
+	bookWishList: state.wishList.wishList,
 });
 
 export default connect(mapPropsToState, null)(WishListPage);
