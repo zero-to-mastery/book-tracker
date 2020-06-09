@@ -83,6 +83,7 @@
 -   [@Liddell-Ironfoot](https://github.com/Liddell-IronFoot)
 -   [@iphyokafor](https://github.com/iphyokafor)
 -   [@Drod86](https://github.com/Drod86)
+-   [@phat-marc](https://github.com/phat-marc)
 -   [@jolipun](https://github.com/jolipun)
 -   [@dylan-ztm](https://github.com/dylan-ztm)
 -   [@Nilam2112](https://github.com/Nilam2112)
