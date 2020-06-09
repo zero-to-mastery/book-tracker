@@ -1,8 +1,8 @@
-# book-tracker
+# Book-Tracker
 
 "Tracks the amount of books that you've read, the ones you want to read, and the progress on the ones you're reading."
 
-There are 2 different sites- one vanilla js (all files in marked folder) and the other react based
+There are 2 different sites - one vanilla js (all files in marked folder) and the other react based.
 
 # How to run locally
 
@@ -13,3 +13,7 @@ There are 2 different sites- one vanilla js (all files in marked folder) and the
 
 or go into vanilla_js_site folder and open the html file
 
+
+# Acknowledgements
+## Favicons
+React App Favicon: Icon by Freepik on flaticon.com, and made with realfavicongenerator.net
