@@ -6,13 +6,13 @@ var finishedDateInput = document.getElementById("inputFinishedDate");
 var progressInput = document.getElementById("inputProgress");
 var table = document.querySelector("table");
 var clearButton = document.getElementById("clearbutton");
-var inputs =[titleInput,authorInput,startDateInput,finishedDateInput,progressInput];
+var inputs = [titleInput, authorInput, startDateInput, finishedDateInput, progressInput];
 
 
-const inputLength = (input => input.value.length); 
-const createcell = (element) =>{
-    for (input of inputs){
-        switch (input){
+const inputLength = (input => input.value.length);
+const createcell = (element) => {
+    for (input of inputs) {
+        switch (input) {
             case (authorInput):
                 var td = document.createElement("td");
                 td.appendChild(document.createTextNode(authorInput.value))
@@ -46,31 +46,31 @@ const createcell = (element) =>{
     return element
 }
 const clearInputs = () => {
-	authorInput.value="";
-	titleInput.value="";
-	progressInput.value="";
+    authorInput.value = "";
+    titleInput.value = "";
+    progressInput.value = "";
 }
 const addItem = () => {
     var tr = document.createElement("tr");
     tr = createcell(tr);
-	table.appendChild(tr);
-	clearInputs();
+    table.appendChild(tr);
+    clearInputs();
 }
 const addItemAfterClick = () => {
-    if (inputLengthCheck(inputs)){
+    if (inputLengthCheck(inputs)) {
         addItem();
     }
 }
 
 const addItemAfterEnter = () => {
-    if (inputLengthCheck(inputs) && event.keyCode == 13){
+    if (inputLengthCheck(inputs) && event.keyCode == 13) {
         addItem();
     }
 }
 
 const inputLengthCheck = (array) => {
-    let checkArray = array.filter((value) => inputLength(value)<1);
-    return (checkArray.length>0 ? false : true)
+    let checkArray = array.filter((value) => inputLength(value) < 1);
+    return (checkArray.length > 0 ? false : true)
 }
 
 
