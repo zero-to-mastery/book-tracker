@@ -92,3 +92,4 @@
 -   [@stuti371](https://github.com/stuti371)
 -   [@accez](https://github.com/accez)
 -   [@zurirma](https://github.com/zurirma)
+-   [@chiragarora01](https://github.com/chiragarora01)
