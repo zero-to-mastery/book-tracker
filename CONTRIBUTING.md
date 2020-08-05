@@ -1,13 +1,10 @@
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
-
+## How to add your name to the project's contributor list
 To learn how to add your name to this project's contributor list, you can get started <a href="https://github.com/zero-to-mastery/start-here-guidelines"> here </a>.
 
 what needs worked on: (add/edit things that need fixed/done, there is probably more than what is listed below- don't forget to delete things you fixed/finished)
 
 ## react-based site
-- register button on signup page throws error,  but it does validate the email & checks that passwords match
+- register button on signup page throws error, but it does validate the email & checks that passwords match
 - signin button on login page doesn't work- when register & signin are working load at login page- or make landing page 
 - connect book tracker w/ wish list, reading list and add book page - should autopopulate when user resigns in
 - add book should add book to wish list or reading list- should be able to move book from wish list to reading list
