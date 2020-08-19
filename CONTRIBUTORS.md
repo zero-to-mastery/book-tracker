@@ -94,3 +94,5 @@
 -   [@zurirma](https://github.com/zurirma)
 -   [@chiragarora01](https://github.com/chiragarora01)
 -   [@atharv123-wq](https://github.com/atharv123-wq)
+-   [@JohnMHoyt24](https://github.com/JohnMHoyt24)
+
