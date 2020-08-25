@@ -41,7 +41,7 @@ class TopNavbar extends Component {
 									to='/wish-list'
 									className='nav-link white underline pa4 pointer'
 								>
-									Books WishList
+									Books Wish-List
 								</NavLink>
 							</NavItem>
 							<NavItem>
