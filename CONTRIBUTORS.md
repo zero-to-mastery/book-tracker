@@ -95,3 +95,4 @@
 -   [@chiragarora01](https://github.com/chiragarora01)
 -   [@atharv123-wq](https://github.com/atharv123-wq)
 - 	[@kwalls13](https://github.com/kwalls13)
+- 	[@beGuided](https://github.com/beGuided)
