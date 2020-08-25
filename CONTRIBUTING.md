@@ -15,7 +15,6 @@ what needs worked on: (add/edit things that need fixed/done, there is probably m
 - newsletter page needs more to it- currently just a page that says to subscribe to newsletter
 - most newletter page links/buttons don't work- submit sort of works gives message saying too many requests for the newletter & login&homepage links work
 - login button gives no reponse-needs fixed- once verified should take to site- if info is wrong should give some kind of feedback
-- need to validate email on registration page
 - need to check that passwords match from password input and repeat password inputs
 - register button should store info and take you to the site- currently only gives pop up saying you registered
 - add button doesn't appear to do anything- should add book to users 'file' - maybe consider adding a rating for when book is finished and an option to comment on it with a check box saying whether the rating and comment can be shared with other users

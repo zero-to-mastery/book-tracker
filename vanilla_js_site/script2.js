@@ -1,6 +1,6 @@
-let b = document.getElementsByTagName('a')[0]
+let b = document.getElementById('registration');
 
-b.addEventListener("click", function(){
+b.addEventListener("submit", function(){
     alert("Congratulations!!!, you have just successfully sign into Book-tracker");
    
 })
