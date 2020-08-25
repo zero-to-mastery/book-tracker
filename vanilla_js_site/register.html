@@ -91,13 +91,14 @@
 
         <h1 style="color: #bfd8d8">Register to book tracking Platform</h1>
         <br>
-        <form name="form1" action="" method="post" onsubmit="required()">
+        <form name="form1" action="" method="post" id="registration">
             <div class="form-group">
                 <input
                         type="text"
                         class="form-control mb-3"
                         placeholder="Enter name"
                         name="text1"
+                        required
                 />
                 <br>
                 <input
@@ -105,6 +106,7 @@
                         class="form-control mb-3"
                         placeholder="Enter email"
                         name="text2"
+                        required
                 />
 
                 <br>
@@ -113,6 +115,7 @@
                         class="form-control mb-3"
                         placeholder="Enter password"
                         name="text3"
+                        required
                 />
 
                 <br>
@@ -121,13 +124,12 @@
                         type="password"
                         class="form-control mb-3"
                         placeholder="Repeat password"
+                        required
 
                 />
 
                 <br>
-                <a href="" class="btn btn-primary btn-block btn-lg">
-                    Register
-                </a>
+                <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
                 
                 <a href="login.html" id="signup" class="btn btn-primary btn-block btn-lg" > 
                     Login 
