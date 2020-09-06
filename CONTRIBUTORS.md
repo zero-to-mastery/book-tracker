@@ -97,3 +97,4 @@
 -   [@atharv123-wq](https://github.com/atharv123-wq)
 - 	[@kwalls13](https://github.com/kwalls13)
 - 	[@beGuided](https://github.com/beGuided)
+- 	[@GoGi2712](https://github.com/GoGi2712)
