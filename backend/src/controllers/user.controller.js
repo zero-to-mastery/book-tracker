@@ -15,7 +15,7 @@ export default {
 		let user = await User.findOne({ email }); // Verify if user already exist.
 		if (user) {
 			return res.status(400).json({
-				message: 'User already registrated.',
+				message: 'User already registered.',
 			});
 		}
 
@@ -59,7 +59,7 @@ export default {
 		const token = user.generateAuthToken();
 
 		res.header('x-auth-token', token).status(200).send({
-			message: 'Succesfuly logged in!',
+			message: 'Successfully logged in!',
 			token,
 		});
 	},

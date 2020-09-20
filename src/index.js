@@ -6,7 +6,7 @@ import { createStore, compose, combineReducers } from 'redux';
 import 'tachyons';
 
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
