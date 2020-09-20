@@ -53,7 +53,7 @@ const schema = {
 		.regex(/\S+@\S+\.\S+/)
 		.min(6)
 		.max(255),
-	password: Joi.string().trim().required().min(12).max(1024),
+	password: Joi.string().trim().required().min(8).max(1024),
 };
 
 function validateRegister(user) {

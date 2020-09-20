@@ -24,13 +24,19 @@ class SignUpPage extends Component {
     e.preventDefault();
     const { name, email, password, confirmPassword } = this.state.data;
 
-    if (password !== confirmPassword) return alert("Password doesn't match");
-
-    const response = await SignUpService.request(JSON.stringify({ name, email, password }))
-    if (response.error) {
-      this.setState((prevState) => ({
-        errors: { ...prevState.errors, ...response.body.details }
-      }));
+    if (password !== confirmPassword) {/* alert("Password doesn't match")*/
+      this.setState({
+        errors: {
+          confirmPassword: "Password doesn't match"
+        }
+      })
+    } else {
+      const response = await SignUpService.request(JSON.stringify({ name, email, password }))
+      if (response.error) {
+        this.setState((prevState) => ({
+          errors: { ...response.body.details }
+        }));
+      }
     }
   };
 
