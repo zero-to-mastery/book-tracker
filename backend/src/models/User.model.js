@@ -57,16 +57,20 @@ const schema = {
 };
 
 function validateRegister(user) {
-	const userSchema = { ...schema };
+	const userSchema = Joi.object({ ...schema	});
 
-	return Joi.validate(user, userSchema);
+	return userSchema.validate(user, {
+	  errors: {
+	    label: false
+    }
+  });
 }
 
 function validateLogin(user) {
 	const { password, email } = schema;
-	const loginSchema = { password, email };
+	const loginSchema = Joi.object({ password, email });
 
-	return Joi.validate(user, loginSchema);
+	return loginSchema.validate(user);
 }
 
 module.exports.User = mongoose.model('User', userSchema);
