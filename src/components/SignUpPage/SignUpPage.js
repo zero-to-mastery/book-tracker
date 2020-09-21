@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import SignUpService from "../../services/signUp.service";
+import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
 
 class SignUpPage extends Component {
   state = {
@@ -8,29 +10,32 @@ class SignUpPage extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    const data = { ...this.state.data, [name]: value };
-
-    this.setState({ data });
+    this.setState(prevState => {
+      return {
+        data: {
+          ...prevState.data,
+          [name]: value
+        }
+      }
+    })
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = this.state.data;
 
-    if (password !== confirmPassword) return alert("Password dont' match");
-
-    try {
-      await fetch("http://localhost:5000/api/auth/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
-      });
-    } catch (error) {
-      console.error(error);
-      if (error && error.respose.status === 400) {
-        const errors = { ...this.state.errors };
-        errors.name = error.response.data;
-        this.setState({ errors });
+    if (password !== confirmPassword) {/* alert("Password doesn't match")*/
+      this.setState({
+        errors: {
+          confirmPassword: "Password doesn't match"
+        }
+      })
+    } else {
+      const response = await SignUpService.request(JSON.stringify({ name, email, password }))
+      if (response.error) {
+        this.setState((prevState) => ({
+          errors: { ...response.body.details }
+        }));
       }
     }
   };
@@ -39,33 +44,37 @@ class SignUpPage extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
         <h2>Sign Up</h2>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          name="name"
+        <AlteredTextField
           id="name"
-          placeholder="Name"
-        />
-        <input
+          type="text"
+          label="Name"
           onChange={this.handleChange}
-          type="email"
-          name="email"
+          value={this.state.data.name}
+          error={this.state.errors.name}
+        />
+        <AlteredTextField
           id="email"
-          placeholder="Email"
-        />
-        <input
+          type="email"
+          label="E-mail"
           onChange={this.handleChange}
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
+          value={this.state.data.email}
+          error={this.state.errors.email}
         />
-        <input
-          onChange={this.handleChange}
-          type="password"
-          name="confirmPassword"
+        <AlteredTextField
           id="password"
-          placeholder="Confirm Password"
+          type="password"
+          label="Password"
+          onChange={this.handleChange}
+          value={this.state.data.password}
+          error={this.state.errors.password}
+        />
+        <AlteredTextField
+          id="confirmPassword"
+          type="password"
+          label="Confirm password"
+          onChange={this.handleChange}
+          value={this.state.data.confirmPassword}
+          error={this.state.errors.confirmPassword}
         />
         <button>Register</button>
       </form>

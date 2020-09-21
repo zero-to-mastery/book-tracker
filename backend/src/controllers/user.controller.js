@@ -5,17 +5,21 @@ const {
 } = require('../models/User.model');
 const bcrypt = require('bcryptjs');
 
+const collectErrorMessage = (error) => ({ [error.details[0].context.key]: error.details[0].message })
+
 export default {
 	signUp: async (req, res) => {
 		const { error } = validateRegister(req.body);
-		if (error) return res.status(400).send(error.details[0].message);
+		if (error) return res.status(400).send({
+      type: error.name, details: collectErrorMessage(error)
+		});
 
 		const { email, password, name } = req.body;
 
 		let user = await User.findOne({ email }); // Verify if user already exist.
 		if (user) {
 			return res.status(400).json({
-				message: 'User already registrated.',
+				message: 'User already registered.',
 			});
 		}
 
@@ -59,7 +63,7 @@ export default {
 		const token = user.generateAuthToken();
 
 		res.header('x-auth-token', token).status(200).send({
-			message: 'Succesfuly logged in!',
+			message: 'Successfully logged in!',
 			token,
 		});
 	},
