@@ -13,7 +13,7 @@
 
 .book-list > ul > li a {
   text-decoration: none;
-  color: #000;
+  color: rgb(255, 255, 255);
   display: block;
   width: 400px;
 
@@ -31,4 +31,8 @@
 .add-book > h2,
 .book-list > h2 {
   font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.form-group label {
+  color: white
 }
