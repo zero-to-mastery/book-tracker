@@ -4,14 +4,16 @@
 }
 
 .nav-link {
+    margin: 5px;
     padding: 7.5px 20px;
     transition: 500ms;
     text-decoration: none;
 }
 
 .nav-link:hover {
-    background-color: #493e6d;
-    border-radius: 2px;
+    /* background-color: #493e6d; */
+    /* border-radius: 2px; */
+    transform: scale(1.2);
 }
 
 

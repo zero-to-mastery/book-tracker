@@ -30,7 +30,7 @@ class TopNavbar extends Component {
 			<div className='navigation'>
 				<Navbar className='navbar navbar-dark ma' expand='md'>
 					<NavbarBrand tag={Link} to='/'>
-						Book Tracker
+						<h4>Book Tracker</h4>
 					</NavbarBrand>
 					<NavbarToggler onClick={this.toggle} />
 					<Collapse isOpen={this.state.isOpen} navbar>
@@ -41,7 +41,7 @@ class TopNavbar extends Component {
 									to='/wish-list'
 									className='nav-link white underline pa4 pointer'
 								>
-									Books Wish-List
+									<h6>Books Wish-List</h6>
 								</NavLink>
 							</NavItem>
 							<NavItem>
@@ -50,7 +50,7 @@ class TopNavbar extends Component {
 									to='/currentlist'
 									className='nav-active-style pa4'
 								>
-									Reading List
+									<h6>Reading List</h6>
 								</NavLink>
 							</NavItem>
 							<NavItem>
@@ -60,7 +60,7 @@ class TopNavbar extends Component {
 									className='nav-link white underline pa4'
 									value='Add Book'
 								>
-									Add Book
+									<h6>Add Book</h6>
 								</NavLink>
 							</NavItem>
 						</Nav>
@@ -73,7 +73,7 @@ class TopNavbar extends Component {
 											to='/logout'
 											className='nav-active-style'
 										>
-											Logout
+											<h6>Logout</h6>
 										</NavLink>{' '}
 									</NavItem>
 								</React.Fragment>
@@ -87,7 +87,7 @@ class TopNavbar extends Component {
 											to='/login'
 											className='nav-active-style'
 										>
-											Login
+											<h6>Login</h6>
 										</NavLink>
 									</NavItem>
 									<NavItem>
@@ -96,7 +96,7 @@ class TopNavbar extends Component {
 											to='/signup'
 											className='nav-active-style'
 										>
-											Sign Up
+											<h6>Sign Up</h6>
 										</NavLink>{' '}
 									</NavItem>
 								</React.Fragment>
