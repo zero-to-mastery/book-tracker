@@ -3714,4 +3714,14 @@ table td {
 .inputBook:hover {
   background-color: #bfd8d8;
 }
+
+/* Newsletter */
+
+.text-box {
+  width: 300px;
+  border: 15px dotted #00ccff;
+  padding: 50px;
+  margin-left: 800px;
+  margin-top: 50px;
+  color: #fff;
 }
