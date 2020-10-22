@@ -17,6 +17,8 @@ There are 2 different sites - one vanilla js (all files in marked folder) and th
 
 or go into vanilla_js_site folder and open the html file
 
+# Tip
+To make a pull request, search up "Hacktoberfest", select a repository that interests you, then click on README, edit changes, then propose your change.
 
 # Acknowledgements
 ## Favicons
