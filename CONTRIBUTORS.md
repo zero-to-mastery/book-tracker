@@ -100,3 +100,4 @@
 - 	[@beGuided](https://github.com/beGuided)
 - 	[@GoGi2712](https://github.com/GoGi2712)
 - 	[@LeslieLopez25](https://github.com/LeslieLopez25)
+-   [@megan-d](https://github.com/megan-d)
