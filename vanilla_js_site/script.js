@@ -8,7 +8,6 @@ var table = document.querySelector("table");
 var clearButton = document.getElementById("clearbutton");
 var inputs = [titleInput, authorInput, startDateInput, finishedDateInput, progressInput];
 
-
 const inputLength = (input => input.value.length);
 const createcell = (element) => {
     for (input of inputs) {
@@ -43,8 +42,18 @@ const createcell = (element) => {
                 break;
         }
     }
+    let del = document.createElement("button");
+    del.appendChild(document.createTextNode("Remove"));
+    del.classList.add("deleteBtn");
+    del.onclick = removeParent;
+    element.appendChild(del);
     return element
 }
+
+const removeParent = (delBtn) => {
+    delBtn.target.parentNode.remove();
+}
+
 const clearInputs = () => {
     authorInput.value = "";
     titleInput.value = "";
@@ -72,7 +81,6 @@ const inputLengthCheck = (array) => {
     let checkArray = array.filter((value) => inputLength(value) < 1);
     return (checkArray.length > 0 ? false : true)
 }
-
 
 button.addEventListener("click", addItemAfterClick);
 inputProgress.addEventListener("keypress", addItemAfterEnter);
