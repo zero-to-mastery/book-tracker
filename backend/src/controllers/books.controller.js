@@ -1,6 +1,6 @@
 const { Book } = require('../models/Book.model');
 
-export default {
+module.exports = {
 	addBook: async (req, res) => {
 		const { title, author } = req.body;
 		const titleExist = await Book.findOne({ title });
