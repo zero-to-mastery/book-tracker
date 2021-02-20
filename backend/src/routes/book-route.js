@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 const express = require('express');
 const controller = require('../controllers/books.controller');
+=======
+import express from 'express';
+import controller from '../controllers/books.controller';
+>>>>>>> upstream/master
 
 const router = express.Router();
 

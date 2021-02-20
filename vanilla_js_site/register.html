@@ -1,0 +1,177 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./media/book-tracker-icon.png">
+
+    <title>Register</title>
+    <link rel="shortcut icon" type="image/png" href="static/images/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+            integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+            crossorigin="anonymous"
+    />
+    <style>
+
+        .console {
+
+            alignment: center;
+            width: 50%;
+
+        .after {
+            alignment: center;
+        }
+
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+            background: -webkit-linear-gradient(330deg, #000, #f0a6ca);
+            background: linear-gradient(120deg, #000, #f0a6ca);
+            overflow: visible;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?cs=srgb&dl=background-balance-business-commerce-583846.jpg&fm=jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 60%;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+    <link
+            href="https://fonts.googleapis.com/css?family=Quicksand"
+            rel="stylesheet"
+    />
+</head>
+<body style="background-color: #28a7ab">
+
+<div>
+
+    <div class="bg-image"></div>
+    <div class="bg-text" style="color: black">
+
+        <h1 style="color: #bfd8d8">Register to book tracking Platform</h1>
+        <br>
+        <form name="form1" action="" method="post" id="registration">
+            <div class="form-group">
+                <input
+                        type="text"
+                        class="form-control mb-3"
+                        placeholder="Enter name"
+                        name="text1"
+                        required
+                />
+                <br>
+                <input
+                        type="email"
+                        class="form-control mb-3"
+                        placeholder="Enter email"
+                        name="text2"
+                        required
+                />
+
+                <br>
+                <input
+                        type="password"
+                        class="form-control mb-3"
+                        placeholder="Enter password"
+                        name="text3"
+                        required
+                />
+
+                <br>
+                <input
+                        name="text4"
+                        type="password"
+                        class="form-control mb-3"
+                        placeholder="Repeat password"
+                        required
+
+                />
+
+                <br>
+                <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
+                
+                <a href="login.html" id="signup" class="btn btn-primary btn-block btn-lg" > 
+                    Login 
+                </a>
+                <h3 class="have-acct">Already have an account? Click Login.</h3>
+
+                <br>
+                <form>
+                    <input
+                            class="btn btn-primary btn-lg"
+                            id="goback"
+                            onClick="javascript:history.go(-1)"
+                            type="button"
+                            value="Go Back"
+                    />
+                </form>
+            </div>
+        </form>
+        <script type="text/javascript" src="script2.js"></script>
+
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"
+        ></script>
+
+        <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"
+        ></script>
+        <script
+                src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+                integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+                crossorigin="anonymous"
+        ></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+        <script type="text/javascript">
+            CKEDITOR.replace('editor')
+        </script>
+    </div>
+
+</body>
+</html>

@@ -42,18 +42,16 @@ class AddPage extends Component {
     const { books } = this.state;
 
     return (
-      <div className='row'>
-        <h2 className='col-12 text-center font-weight-normal mt-3 display-4'>
-          Add Book
-        </h2>
-        <div className='col-5 text-center book-list'>
+      <div className="row">
+        <h2 className="col-12 text-center font-weight-normal mt-3 display-4">Add Book</h2>
+        <div className="col-lg-5 col-sm-12 col-xs-12 text-center book-list">
           <h2>Book's List</h2>
-          <ul className='p-0 text-center'>
+          <ul className="p-0 text-center">
             {books.map((book) => {
               const url = `http://www.google.com/search?q=${book.title}%20book`;
               return (
                 <li key={book.id || book.title}>
-                  <a href={url} target='_blank' rel='noopener noreferrer'>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
                     {book.title}
                   </a>
                 </li>
@@ -61,35 +59,35 @@ class AddPage extends Component {
             })}
           </ul>
         </div>
-        <div className='col-2'></div>
-        <div className='col-5 text-center add-book'>
+        <div className="col-2"></div>
+        <div className="col-lg-5 col-sm-12 col-xs-12 text-center add-book">
           <h2>Add Book</h2>
-          <form className='col d-block' onSubmit={this.onSubmitBook}>
-            <div className='form-group'>
-              <label htmlFor='title'>Enter the book's title:</label>
+          <form className="col d-block" onSubmit={this.onSubmitBook}>
+            <div className="form-group">
+              <label htmlFor="title">Enter the book's title:</label>
               <input
-                type='text'
-                name='title'
-                id='title'
-                className='form-control'
-                placeholder='Ex. Crime and Punishment'
+                type="text"
+                name="title"
+                id="title"
+                className="form-control"
+                placeholder="Ex. Crime and Punishment"
                 value={this.state.value}
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-group'>
-              <label htmlFor='author'>Enter the book's author:</label>
+            <div className="form-group">
+              <label htmlFor="author">Enter the book's author:</label>
               <input
-                type='text'
-                name='author'
-                id='author'
-                className='form-control'
-                placeholder='Ex. Fiodor Dostoievsky'
+                type="text"
+                name="author"
+                id="author"
+                className="form-control"
+                placeholder="Ex. Fiodor Dostoievsky"
                 value={this.state.value}
                 onChange={this.handleChange}
               />
             </div>
-            <button className='btn btn-success'>Add</button>
+            <button className="btn btn-success">Add</button>
           </form>
         </div>
       </div>
