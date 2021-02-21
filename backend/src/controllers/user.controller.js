@@ -5,13 +5,7 @@ const {
 } = require('../models/User.model');
 const bcrypt = require('bcryptjs');
 
-<<<<<<< HEAD
 module.exports = {
-=======
-const collectErrorMessage = (error) => ({ [error.details[0].context.key]: error.details[0].message })
-
-export default {
->>>>>>> upstream/master
 	signUp: async (req, res) => {
 		const { error } = validateRegister(req.body);
 		if (error) return res.status(400).send({
