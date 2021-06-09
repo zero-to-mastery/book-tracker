@@ -101,4 +101,5 @@
 - 	[@GoGi2712](https://github.com/GoGi2712)
 - 	[@LeslieLopez25](https://github.com/LeslieLopez25)
 -   [@megan-d](https://github.com/megan-d)
+-	[@patalexander](https://github.com/patalexander)
 -   [@muhiqsimui](https://github.com/muhiqsimui)
