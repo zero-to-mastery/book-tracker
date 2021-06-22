@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getBooks } from '../../services/default-books.service.js';
+import BookService from '../../services/books.service';
 import './AddPage.css';
 import '../GridLayout/GridLayout';
 
@@ -25,17 +26,18 @@ class AddPage extends Component {
   onSubmitBook = (e) => {
     e.preventDefault();
 
+    const title = e.target[0].value
+    const author = e.target[1].value
+
     console.log(e.target[0].value, e.target[1].value);
 
     const books = [
       ...this.state.books,
-      {
-        [e.target[0].name]: e.target[0].value,
-        [e.target[1].name]: e.target[1].value,
-      },
+      { title, author },
     ];
 
     this.setState({ books });
+    BookService.addBook({ title, author })
   };
 
   render() {
