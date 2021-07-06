@@ -1,85 +1,86 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import SignUpService from "../../services/signUp.service";
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
 
-class SignUpPage extends Component {
-  state = {
-    data: { name: "", email: "", password: "", confirmPassword: "" },
-    errors: {},
-  };
+const SignUpPage = ({ history }) => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [error, setError] = useState({});
 
-  handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState(prevState => {
+    setData((prevData) => {
       return {
-        data: {
-          ...prevState.data,
-          [name]: value
-        }
-      }
-    })
+        ...prevData,
+        [name]: value,
+      };
+    });
   };
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, password, confirmPassword } = this.state.data;
+    const { name, email, password, confirmPassword } = data;
 
-    if (password !== confirmPassword) {/* alert("Password doesn't match")*/
-      this.setState({
+    if (password !== confirmPassword) {
+      /* alert("Password doesn't match")*/
+      setError({
         errors: {
-          confirmPassword: "Password doesn't match"
-        }
-      })
+          confirmPassword: "Password doesn't match",
+        },
+      });
     } else {
-      const response = await SignUpService.request(JSON.stringify({ name, email, password }))
+      const response = await SignUpService.request(JSON.stringify({ name, email, password }));
       if (response.error) {
-        this.setState((prevState) => ({
-          errors: { ...response.body.details }
-        }));
+        setError({
+          ...response.body.details,
+        });
       }
+      history.push("/login");
     }
   };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit} className="form-container">
-        <h2>Sign Up</h2>
-        <AlteredTextField
-          id="name"
-          type="text"
-          label="Name"
-          onChange={this.handleChange}
-          value={this.state.data.name}
-          error={this.state.errors.name}
-        />
-        <AlteredTextField
-          id="email"
-          type="email"
-          label="E-mail"
-          onChange={this.handleChange}
-          value={this.state.data.email}
-          error={this.state.errors.email}
-        />
-        <AlteredTextField
-          id="password"
-          type="password"
-          label="Password"
-          onChange={this.handleChange}
-          value={this.state.data.password}
-          error={this.state.errors.password}
-        />
-        <AlteredTextField
-          id="confirmPassword"
-          type="password"
-          label="Confirm password"
-          onChange={this.handleChange}
-          value={this.state.data.confirmPassword}
-          error={this.state.errors.confirmPassword}
-        />
-        <button>Register</button>
-      </form>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit} className="form-container">
+      <h2>Sign Up</h2>
+      <AlteredTextField
+        id="name"
+        type="text"
+        label="Name"
+        onChange={handleChange}
+        value={data.name}
+        error={error.name}
+      />
+      <AlteredTextField
+        id="email"
+        type="email"
+        label="E-mail"
+        onChange={handleChange}
+        value={data.email}
+        error={error.email}
+      />
+      <AlteredTextField
+        id="password"
+        type="password"
+        label="Password"
+        onChange={handleChange}
+        value={data.password}
+        error={error.password}
+      />
+      <AlteredTextField
+        id="confirmPassword"
+        type="password"
+        label="Confirm password"
+        onChange={handleChange}
+        value={data.confirmPassword}
+        error={error.confirmPassword}
+      />
+      <button>Register</button>
+    </form>
+  );
+};
 
 export default SignUpPage;
