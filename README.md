@@ -1,6 +1,6 @@
 # Book Tracker
 
-![Project Thumbnail](https://i.ibb.co/XDJGDbz/Amazing-book-tracker-preview.jpg)
+![Project Thumbnail](https://i.ibb.co/yhzRCG5/amazing-book-tracker-preview.jpg)
 
 ## Description
 
