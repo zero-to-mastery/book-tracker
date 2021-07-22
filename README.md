@@ -40,8 +40,6 @@ git clone https://github.com/zero-to-mastery/book-tracker.git
 
 ### Install dependencies
 
-For the client side:
-
 ```sh
 cd book-tracker
 npm install
