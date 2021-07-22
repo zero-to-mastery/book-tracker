@@ -1,10 +1,14 @@
 # Book Tracker
 
+![Project Thumbnail](https://i.ibb.co/XDJGDbz/Amazing-book-tracker-preview.jpg)
+
 ## Description
 
-An app that keeps track of your books.
+**The Amazing Book Tracker** is a web-based application created by students from the [Zero To Mastery Academy](https://zerotomastery.io/).
 
-It tracks the books you've read, the books you want to read, and the books you're currently reading.
+The goal of the app is to provide users with a means to manage their book collections.
+
+End users can record books they've previously read, books they want to read, as well as the books they're currently reading.
 
 ## Functionality
 
@@ -14,7 +18,13 @@ Users should be able to login as an existing user, once they have registered.
 
 Users should be able to add a book to the system.
 
-Users should be able to place books on 3 separate lists: books they've already read; books they want to read; books they are currently reading.
+Users should be able to place books on 3 separate lists:
+
+1. Books they've already read
+2. Books they want to read
+3. Books they are currently reading.
+
+Finally, users should be able to navigate through
 
 Users should be able to view a list of books they've already read, want to read or are currently reading.
 
@@ -75,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Favicons
 
-React App Favicon: Icon by Freepik on flaticon.com, and made with realfavicongenerator.net
+React App Favicon: Icon by Freepik on flaticon.com, and made with [realfavicongenerator.net](https://realfavicongenerator.net/).
