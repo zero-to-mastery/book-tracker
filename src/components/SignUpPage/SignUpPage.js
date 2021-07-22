@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+
+// API
 import SignUpService from "../../services/signUp.service";
+
+// Custom form component
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
+
+// Form fields moved to data file
+import { formFields } from "./SignUpFormFields";
 
 class SignUpPage extends Component {
   state = {
@@ -10,33 +17,42 @@ class SignUpPage extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
         data: {
           ...prevState.data,
-          [name]: value
-        }
-      }
-    })
+          [name]: value,
+        },
+      };
+    });
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = this.state.data;
+    console.log(`Form fields: ${name}, ${email}, ${password}`);
 
-    if (password !== confirmPassword) {/* alert("Password doesn't match")*/
+    if (password !== confirmPassword) {
       this.setState({
         errors: {
-          confirmPassword: "Password doesn't match"
-        }
-      })
-    } else {
-      const response = await SignUpService.request(JSON.stringify({ name, email, password }))
-      if (response.error) {
-        this.setState((prevState) => ({
-          errors: { ...response.body.details }
-        }));
-      }
+          confirmPassword: "Password doesn't match",
+        },
+      });
+      return;
+    }
+
+    // Since we're using async/await,
+    // we wrap them call in a try/catch block
+    try {
+      const response = await SignUpService.request(JSON.stringify({ name, email, password }));
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      this.setState((prevState) => ({
+        ...prevState,
+        errors: { error },
+      }));
     }
   };
 
@@ -44,7 +60,21 @@ class SignUpPage extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
         <h2>Sign Up</h2>
-        <AlteredTextField
+        {/* Render form fields */}
+        {formFields.map((field, index) => (
+          <AlteredTextField
+            key={index}
+            required={field.isRequired}
+            id={field.id}
+            name={field.name}
+            type={field.type}
+            label={field.label}
+            onChange={this.handleChange}
+            error={this.state.errors[field.name]}
+          />
+        ))}
+
+        {/* <AlteredTextField
           id="name"
           type="text"
           label="Name"
@@ -75,8 +105,8 @@ class SignUpPage extends Component {
           onChange={this.handleChange}
           value={this.state.data.confirmPassword}
           error={this.state.errors.confirmPassword}
-        />
-        <button>Register</button>
+        /> */}
+        <button type="submit">Register</button>
       </form>
     );
   }
