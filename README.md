@@ -8,13 +8,13 @@
 
 The goal of the app is to provide users with a means to manage their book collections.
 
-End users can record books they've previously read, books they want to read, as well as the books they're currently reading.
+End users can record the books they've previously read, books they want to read; as well as the books they're currently reading.
 
 ## Functionality
 
-Users should be able to sign up and register as a new user.
+Users should be able to sign up as new members by filling out a registration form.
 
-Users should be able to login as an existing user, once they have registered.
+After joining, they should be able to log in as an existing user.
 
 Users should be able to add a book to the system.
 
@@ -24,9 +24,7 @@ Users should be able to place books on 3 separate lists:
 2. Books they want to read
 3. Books they are currently reading.
 
-Finally, users should be able to navigate through
-
-Users should be able to view a list of books they've already read, want to read or are currently reading.
+Finally, users should be able to easily navigate through these separate lists.
 
 ## Getting Started
 
