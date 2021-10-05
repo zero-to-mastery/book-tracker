@@ -1,9 +1,9 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import userRoute from './routes/user-route';
-import bookRoute from './routes/book-route';
-import dotenv from 'dotenv';
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import userRoute from "./routes/user-route";
+import bookRoute from "./routes/book-route";
+import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
@@ -11,8 +11,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
-app.use('/api/auth', userRoute);
-app.use('/', bookRoute);
+app.use("/api/auth", userRoute);
+app.use("/", bookRoute);
 
 // DATABASE CONNECTION SETTINGS
 mongoose
@@ -20,9 +20,9 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('Successfuly connected to MongoDB'))
+  .then(() => console.log("Successfuly connected to MongoDB"))
   .catch(() => {
-    throw new Error('Failed attempt to connect to database');
+    throw new Error("Failed attempt to connect to database");
   });
 
 const port = process.env.PORT || 5000;
