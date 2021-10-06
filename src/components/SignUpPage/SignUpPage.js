@@ -32,76 +32,66 @@ class SignUpPage extends Component {
           confirmPassword: "Password doesn't match",
         },
       });
-      return;
-    }
-
-    // Since we're using async/await,
-    // we wrap them call in a try/catch block
-    try {
+    } else {
       const response = await SignUpService.request(JSON.stringify({ name, email, password }));
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-      this.setState((prevState) => ({
-        ...prevState,
-        errors: { error },
-      }));
+      if (response.error) {
+        this.setState((prevState) => ({
+          errors: { ...response.body.details },
+        }));
+      }
     }
+  };
+
+  showPassword = () => {
+    document.getElementById("password").type = document.getElementById("password").type == "text" ? "password" : "text";
+    document.getElementById("confirmPassword").type =
+      document.getElementById("confirmPassword").type == "text" ? "password" : "text";
   };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="form-container">
-        <h2>Sign Up</h2>
-        {/* Render form fields */}
-        {formFields.map((field, index) => (
+      <React.Fragment>
+        <form onSubmit={this.handleSubmit} className="form-container">
+          <h2>Sign Up</h2>
           <AlteredTextField
-            key={index}
-            required={field.isRequired}
-            id={field.id}
-            name={field.name}
-            type={field.type}
-            label={field.label}
+            id="name"
+            type="text"
+            label="Name"
             onChange={this.handleChange}
-            error={this.state.errors[field.name]}
+            value={this.state.data.name}
+            error={this.state.errors.name}
           />
-        ))}
-
-        {/* <AlteredTextField
-          id="name"
-          type="text"
-          label="Name"
-          onChange={this.handleChange}
-          value={this.state.data.name}
-          error={this.state.errors.name}
-        />
-        <AlteredTextField
-          id="email"
-          type="email"
-          label="E-mail"
-          onChange={this.handleChange}
-          value={this.state.data.email}
-          error={this.state.errors.email}
-        />
-        <AlteredTextField
-          id="password"
-          type="password"
-          label="Password"
-          onChange={this.handleChange}
-          value={this.state.data.password}
-          error={this.state.errors.password}
-        />
-        <AlteredTextField
-          id="confirmPassword"
-          type="password"
-          label="Confirm password"
-          onChange={this.handleChange}
-          value={this.state.data.confirmPassword}
-          error={this.state.errors.confirmPassword}
-        /> */}
-        <button type="submit">Register</button>
-      </form>
+          <AlteredTextField
+            id="email"
+            type="email"
+            label="E-mail"
+            onChange={this.handleChange}
+            value={this.state.data.email}
+            error={this.state.errors.email}
+          />
+          <AlteredTextField
+            id="password"
+            type="password"
+            label="Password"
+            onChange={this.handleChange}
+            value={this.state.data.password}
+            error={this.state.errors.password}
+          />
+          <AlteredTextField
+            id="confirmPassword"
+            type="password"
+            label="Confirm password"
+            onChange={this.handleChange}
+            value={this.state.data.confirmPassword}
+            error={this.state.errors.confirmPassword}
+          />
+        </form>
+        <div style={{ position: "relative", left: "29%", width: "100%" }}>
+          <input type="checkbox" onClick={this.showPassword} style={{ width: "2%" }} />
+          <span style={{ color: "white", fontSize: "0.8rem" }}>Show password</span>
+        </div>
+        <button style={{ position: "relative", left: "43%" }}>Register</button>
+      </React.Fragment>
     );
   }
 }
