@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-
-// API
 import SignUpService from "../../services/signUp.service";
-
-// Custom form component
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
-
-// Form fields moved to data file
 import { formFields } from "./SignUpFormFields";
 
 class SignUpPage extends Component {
@@ -15,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -27,10 +21,10 @@ class SignUpPage extends Component {
     });
   };
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { name, email, password, confirmPassword } = this.state.data;
-    console.log(`Form fields: ${name}, ${email}, ${password}`);
 
     if (password !== confirmPassword) {
       this.setState({
