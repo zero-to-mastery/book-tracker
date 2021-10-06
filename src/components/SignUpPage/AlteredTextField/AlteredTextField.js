@@ -1,14 +1,13 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
 
-export const AlteredTextField = ({
-  id, type, label, onChange, value, error
-}) => {
+export const AlteredTextField = ({ required, id, name, type, label, onChange, value, error }) => {
   return (
     <TextField
+      required={required}
       id={id}
       label={label}
-      name={id}
+      name={name}
       type={type}
       variant="outlined"
       onChange={onChange}
@@ -18,5 +17,5 @@ export const AlteredTextField = ({
       fullWidth
       margin="normal"
     />
-  )
-}
+  );
+};

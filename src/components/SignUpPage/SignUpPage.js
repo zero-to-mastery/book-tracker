@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SignUpService from "../../services/signUp.service";
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
+import { formFields } from "./SignUpFormFields";
 
 class SignUpPage extends Component {
   state = {
@@ -8,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -20,12 +21,12 @@ class SignUpPage extends Component {
     });
   };
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { name, email, password, confirmPassword } = this.state.data;
 
     if (password !== confirmPassword) {
-      /* alert("Password doesn't match")*/
       this.setState({
         errors: {
           confirmPassword: "Password doesn't match",

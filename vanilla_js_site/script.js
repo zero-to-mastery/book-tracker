@@ -34,7 +34,14 @@ const createcell = (element) => {
                 break;
             case (progressInput):
                 var td = document.createElement("td");
-                td.appendChild(document.createTextNode(progressInput.value))
+                td.appendChild(document.createTextNode(progressInput.value + "%"));
+                td.style.cssText = "position: relative; width: 264.2";
+                
+                var progress = document.createElement("div");
+                progress.style.cssText = "background-color: deepskyblue; height: 8px;";
+                progress.style.width = (progressInput.value/100) * 264.2;
+                td.appendChild(progress);
+
                 element.appendChild(td);
                 break;
             default:
