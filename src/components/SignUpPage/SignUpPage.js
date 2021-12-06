@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SignUpService from "../../services/signUp.service";
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
+import { formFields } from "./SignUpFormFields";
 
 class SignUpPage extends Component {
   state = {
@@ -8,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -20,12 +21,16 @@ class SignUpPage extends Component {
     });
   };
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { name, email, password, confirmPassword } = this.state.data;
 
     if (password !== confirmPassword) {
+<<<<<<< HEAD
       /* alert("Password doesn't match")*/
+=======
+>>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
       this.setState({
         errors: {
           confirmPassword: "Password doesn't match",
@@ -60,8 +65,15 @@ class SignUpPage extends Component {
     }
   };
 
+  showPassword = () => {
+    document.getElementById("password").type = document.getElementById("password").type == "text" ? "password" : "text";
+    document.getElementById("confirmPassword").type =
+      document.getElementById("confirmPassword").type == "text" ? "password" : "text";
+  };
+
   render() {
     return (
+<<<<<<< HEAD
       <form onSubmit={this.handleSubmit} className="form-container">
         <h2>Sign Up</h2>
         <input onChange={this.handleChange} type="text" name="name" id="name" placeholder="Name" />
@@ -76,6 +88,50 @@ class SignUpPage extends Component {
         />
         <button>Register</button>
       </form>
+=======
+      <React.Fragment>
+        <form onSubmit={this.handleSubmit} className="form-container">
+          <h2>Sign Up</h2>
+          <AlteredTextField
+            id="name"
+            type="text"
+            label="Name"
+            onChange={this.handleChange}
+            value={this.state.data.name}
+            error={this.state.errors.name}
+          />
+          <AlteredTextField
+            id="email"
+            type="email"
+            label="E-mail"
+            onChange={this.handleChange}
+            value={this.state.data.email}
+            error={this.state.errors.email}
+          />
+          <AlteredTextField
+            id="password"
+            type="password"
+            label="Password"
+            onChange={this.handleChange}
+            value={this.state.data.password}
+            error={this.state.errors.password}
+          />
+          <AlteredTextField
+            id="confirmPassword"
+            type="password"
+            label="Confirm password"
+            onChange={this.handleChange}
+            value={this.state.data.confirmPassword}
+            error={this.state.errors.confirmPassword}
+          />
+        </form>
+        <div style={{ position: "relative", left: "29%", width: "100%" }}>
+          <input type="checkbox" onClick={this.showPassword} style={{ width: "2%" }} />
+          <span style={{ color: "white", fontSize: "0.8rem" }}>Show password</span>
+        </div>
+        <button style={{ position: "relative", left: "43%" }}>Register</button>
+      </React.Fragment>
+>>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
     );
   }
 }

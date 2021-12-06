@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"name": "booktracker",
 	"version": "0.1.0",
 	"private": true,
@@ -44,4 +45,54 @@
 		"not ie <= 11",
 		"not op_mini all"
 	]
+=======
+  "name": "booktracker",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000/",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "bootstrap": "^4.4.1",
+    "hoek": "^6.1.3",
+    "jquery": "^3.5.0",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.21",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.4.1",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "tachyons": "^4.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "\"Tracks the amount of books that you've read, the ones you want to  read, and the progress on the ones  you're reading.\"",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero-to-mastery/book-tracker.git"
+  },
+  "author": "ZTM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zero-to-mastery/book-tracker/issues"
+  },
+  "homepage": "https://zero-to-mastery.github.io/book-tracker/",
+  "devDependencies": {},
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+>>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
 }
