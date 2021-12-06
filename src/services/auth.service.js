@@ -6,7 +6,7 @@ const auth = {
   logout() {
     localStorage.removeItem(tokenKey);
   },
-  getCurrtentUser() {
+  getCurrentUser() {
     try {
       const jwt = localStorage.getItem(tokenKey);
       return jwtDecode(jwt);

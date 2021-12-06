@@ -9,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  const handleChange = (e) => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -21,16 +21,12 @@ class SignUpPage extends Component {
     });
   };
 
-  const handleSubmit = async (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
     const { name, email, password, confirmPassword } = this.state.data;
 
     if (password !== confirmPassword) {
-<<<<<<< HEAD
-      /* alert("Password doesn't match")*/
-=======
->>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
       this.setState({
         errors: {
           confirmPassword: "Password doesn't match",
@@ -73,22 +69,6 @@ class SignUpPage extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <form onSubmit={this.handleSubmit} className="form-container">
-        <h2>Sign Up</h2>
-        <input onChange={this.handleChange} type="text" name="name" id="name" placeholder="Name" />
-        <input onChange={this.handleChange} type="email" name="email" id="email" placeholder="Email" />
-        <input onChange={this.handleChange} type="password" name="password" id="password" placeholder="Password" />
-        <input
-          onChange={this.handleChange}
-          type="password"
-          name="confirmPassword"
-          id="password"
-          placeholder="Password"
-        />
-        <button>Register</button>
-      </form>
-=======
       <React.Fragment>
         <form onSubmit={this.handleSubmit} className="form-container">
           <h2>Sign Up</h2>
@@ -131,7 +111,6 @@ class SignUpPage extends Component {
         </div>
         <button style={{ position: "relative", left: "43%" }}>Register</button>
       </React.Fragment>
->>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
     );
   }
 }
