@@ -1,17 +1,9 @@
-const { User, validateRegister, validateLogin } = require("../models/User.model");
-const bcrypt = require("bcryptjs");
+import User, { validateRegister, validateLogin } from "../models/User.model.js";
+import bcrypt from "bcryptjs";
 
-<<<<<<< HEAD
-module.exports = {
-	signUp: async (req, res) => {
-		const { error } = validateRegister(req.body);
-		if (error) return res.status(400).send({
-      type: error.name, details: collectErrorMessage(error)
-		});
-=======
 const collectErrorMessage = (error) => ({ [error.details[0].context.key]: error.details[0].message });
 
-export default {
+const controller = {
   signUp: async (req, res) => {
     const { error } = validateRegister(req.body);
     if (error)
@@ -19,7 +11,6 @@ export default {
         type: error.name,
         details: collectErrorMessage(error),
       });
->>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
 
     const { email, password, name } = req.body;
 
@@ -75,3 +66,5 @@ export default {
     });
   },
 };
+
+export default controller;

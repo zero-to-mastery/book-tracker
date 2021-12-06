@@ -1,31 +1,35 @@
-const mongoose = require('mongoose');
-const Joi = require('joi');
+import mongoose from "mongoose";
+import Joi from "joi";
 
 const bookSchema = mongoose.Schema(
-	{
-		title: {
-			type: String,
-			required: true,
-			min: 2,
-			max: 255,
-		},
-		author: {
-			type: String,
-			required: true,
-			min: 2,
-			max: 100,
-		},
-	},
-	{ timestamps: true }
+  {
+    title: {
+      type: String,
+      required: true,
+      min: 2,
+      max: 255,
+    },
+    author: {
+      type: String,
+      required: true,
+      min: 2,
+      max: 100,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-function validateBook(book) {
-	const schema = {
-		title: Joi.string().trim().required().min(2).max(255),
-		author: Joi.string().trim().required().min(2).max(255),
-	};
-	return Joi.validate(book, schema);
+export function validateBook(book) {
+  const schema = Joi.object({
+    title: Joi.string().trim().required().min(2).max(255),
+    author: Joi.string().trim().required().min(2).max(255),
+  });
+
+  return schema.validate(book);
 }
 
-module.exports.Book = mongoose.model('Book', bookSchema);
-module.exports.validate = validateBook;
+const Book = mongoose.model("Book", bookSchema);
+
+export default Book;
