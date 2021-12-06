@@ -1,68 +1,77 @@
-const {
-	User,
-	validateRegister,
-	validateLogin,
-} = require('../models/User.model');
-const bcrypt = require('bcryptjs');
+const { User, validateRegister, validateLogin } = require("../models/User.model");
+const bcrypt = require("bcryptjs");
 
+<<<<<<< HEAD
 module.exports = {
 	signUp: async (req, res) => {
 		const { error } = validateRegister(req.body);
 		if (error) return res.status(400).send({
       type: error.name, details: collectErrorMessage(error)
 		});
+=======
+const collectErrorMessage = (error) => ({ [error.details[0].context.key]: error.details[0].message });
 
-		const { email, password, name } = req.body;
+export default {
+  signUp: async (req, res) => {
+    const { error } = validateRegister(req.body);
+    if (error)
+      return res.status(400).send({
+        type: error.name,
+        details: collectErrorMessage(error),
+      });
+>>>>>>> 20d4ce90cce26bc5a7f5eae0f65a93b45b7c9c79
 
-		let user = await User.findOne({ email }); // Verify if user already exist.
-		if (user) {
-			return res.status(400).json({
-				message: 'User already registered.',
-			});
-		}
+    const { email, password, name } = req.body;
 
-		user = new User({
-			name,
-			email,
-			password,
-		});
+    let user = await User.findOne({ email }); // Verify if user already exist.
+    if (user) {
+      return res.status(400).json({
+        message: "User already registered.",
+      });
+    }
 
-		try {
-			const salt = await bcrypt.genSalt(10);
-			user.password = await bcrypt.hash(password, salt);
-			await user.save();
+    user = new User({
+      name,
+      email,
+      password,
+    });
 
-			const token = user.generateAuthToken();
+    try {
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(password, salt);
+      await user.save();
 
-			res.header('x-auth-token', token).status(201).send({
-				message: 'User successfully registered',
-				user: user._id,
-			});
-		} catch (err) {
-			res.status(400).json(err);
-		}
-	},
+      const token = user.generateAuthToken();
 
-	login: async (req, res) => {
-		// const { error } = validateLogin(req.body);
-		// if (error) return res.status(400).send(error.details[0].message);
-		console.log(req.body);
+      res.header("x-auth-token", token).status(201).send({
+        message: "User successfully registered",
+        user: user._id,
+      });
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  },
 
-		const { email, password } = req.body;
-		const user = await User.findOne({ email });
+  login: async (req, res) => {
+    // const { error } = validateLogin(req.body);
+    // if (error) return res.status(400).send(error.details[0].message);
+    // console.log(req.body);
 
-		if (!user) return res.status(400).send('Invalid email or password');
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
 
-		const validPass = await bcrypt.compare(password, user.password);
-		if (!validPass) {
-			return res.status(400).send('Invalid email or password.');
-		}
+    if (!user) return res.status(400).send("Invalid email or password");
 
-		const token = user.generateAuthToken();
+    const validPass = await bcrypt.compare(password, user.password);
+    if (!validPass) {
+      return res.status(400).send("Invalid email or password.");
+    }
 
-		res.header('x-auth-token', token).status(200).send({
-			message: 'Successfully logged in!',
-			token,
-		});
-	},
+    const token = user.generateAuthToken();
+
+    res.header("x-auth-token", token).status(200).send({
+      message: "Successfully logged in!",
+      token,
+    });
+  },
 };
