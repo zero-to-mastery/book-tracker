@@ -15,7 +15,7 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
   display: block;
-  width: 400px;
+  /* width: 400px; */
 
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
