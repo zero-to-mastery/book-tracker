@@ -9,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  const handleChange = (e) => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -21,7 +21,7 @@ class SignUpPage extends Component {
     });
   };
 
-  const handleSubmit = async (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
     const { name, email, password, confirmPassword } = this.state.data;
