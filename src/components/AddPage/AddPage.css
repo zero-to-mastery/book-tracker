@@ -36,3 +36,7 @@
 .form-group label {
   color: white
 }
+
+.form-group {
+	width: 100%;
+}

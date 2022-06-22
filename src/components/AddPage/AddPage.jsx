@@ -28,10 +28,15 @@ const AddPage = () => {
 
   const onSubmitBook = (e) => {
     e.preventDefault();
-    const allBooks = [
-      ...books,{ ...newBook },
-    ];
-    setBooks(allBooks);
+
+    if(newBook.title != ""){
+      const allBooks = [
+        ...books,{ ...newBook },
+      ];
+      setBooks(allBooks);
+      setNewBook({title:'', author:''})
+    }
+
   };
 
   return (
