@@ -16,6 +16,7 @@ export const AlteredTextField = ({ required, id, name, type, label, onChange, va
       helperText={error}
       fullWidth
       margin="normal"
+      color="primary"
     />
   );
 };
