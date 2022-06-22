@@ -44,38 +44,38 @@ const SignUpPage = () =>{
     <React.Fragment>
       <form onSubmit={handleSubmit} className='form-container'>
         <h2>Sign Up</h2>
-        <AlteredTextField
-          id='name'
-          type='text'
-          label='Name'
-          onChange={handleChange}
-          value={data.name}
-          error={errors.name}
-        />
-        <AlteredTextField
-          id="email"
-          type="email"
-          label="Email"
-          onChange={handleChange}
-          value={data.email}
-          error={errors.email}
-        />
-        <AlteredTextField
-          id="password"
-          type="password"
-          label="Password"
-          onChange={handleChange}
-          value={data.password}
-          error={errors.password}
-        />
-        <AlteredTextField
-          id="confirmPassword"
-          type="password"
-          label="Confirm password"
-          onChange={handleChange}
-          value={data.confirmPassword}
-          error={errors.confirmPassword}
-        />
+        <input 
+        type="text" 
+        name='name' 
+        id='name' 
+        value={data.name}
+        placeholder="name"
+        onChange={handleChange} 
+      />
+      <input 
+        type="email" 
+        name='email' 
+        id='email'
+        value={data.email}
+        placeholder="email"
+        onChange={handleChange} 
+      />
+      <input 
+        type="password" 
+        name='password'
+        id='password'
+        value={data.password}
+        placeholder="password"
+        onChange={handleChange} 
+      />
+      <input 
+        type="password"
+        name='confirmPassword'
+        id='confirmPassword'
+        value={data.confirmPassword}
+        placeholder="Confirm Password"
+        onChange={handleChange} 
+      />
       </form>
       <div style={{ position: "relative", left: "29%", width: "100%" }}>
         <input type="checkbox" onClick={showPassword} style={{ width: "2%" }} />
