@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import auth from "../services/auth.service";
 import "./App.css";
 
@@ -22,16 +22,16 @@ const App = () => {
     <div>
       <TopNavbar user={currentUser} />
       <main className="container">
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/wish-list" exact component={WishListPage} />
-          <Route path="/add" exact component={AddPage} />
-          <Route path="/login" exact component={LoginPage} />
-          <Route path="/signup" exact component={SignUpPage} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={HomePage} />
+          <Route path="/wish-list" element={<WishListPage />} />
+          <Route path="/add" element={<AddPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+        </Routes>
       </main>
     </div>
   );
 };
 
-export default withRouter(App);
+export default App;

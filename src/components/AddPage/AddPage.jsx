@@ -11,18 +11,18 @@ const AddPage = () => {
   });
   // const [message, setMessage] = useState(false);
 
-  useEffect(() => {
-    const defaultBooks = getBooks();
-    const fetchBooks = () =>
-      fetch("http://localhost:5000/books")
-        .then((res) => res.json())
-        .then((data) => {
-          setBooks(data);
-        })
-        .catch(setBooks(defaultBooks));
+  // useEffect(() => {
+  //   const defaultBooks = getBooks();
+  //   const fetchBooks = () =>
+  //     fetch("http://localhost:5000/books")
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setBooks(data);
+  //       })
+  //       .catch(setBooks(defaultBooks));
 
-    fetchBooks();
-  }, []);
+  //   fetchBooks();
+  // }, []);
 
   const handleChange = (e) => {
     const { value, name } = e.target;

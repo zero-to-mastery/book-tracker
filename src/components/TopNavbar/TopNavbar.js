@@ -25,11 +25,11 @@ const TopNavbar = ({ user }) => {
                 Books Wish-List
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink tag={Link} to="/currentlist" className="nav-active-style pa4">
                 Reading List
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink tag={Link} to="/add" className="nav-link white underline pa4" value="Add Book">
                 Add Book

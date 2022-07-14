@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, compose, combineReducers } from "redux";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, composeEnhancers());
 const baseName = process.env.NODE_ENV === "development" ? "/" : "/book-tracker";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: true ? "dark" : "light",
   },

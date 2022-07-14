@@ -2,7 +2,6 @@
   "name": "booktracker",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -16,7 +15,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^6.0.1",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "^3.4.1",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",
@@ -40,7 +39,6 @@
     "url": "https://github.com/zero-to-mastery/book-tracker/issues"
   },
   "homepage": "https://zero-to-mastery.github.io/book-tracker/",
-  "devDependencies": {},
   "browserslist": [
     ">0.2%",
     "not dead",

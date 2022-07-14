@@ -9,7 +9,7 @@ class SignUpPage extends Component {
     errors: {},
   };
 
-  const handleChange = (e) => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => {
       return {
@@ -21,7 +21,7 @@ class SignUpPage extends Component {
     });
   };
 
-  const handleSubmit = async (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
     const { name, email, password, confirmPassword } = this.state.data;
@@ -43,9 +43,10 @@ class SignUpPage extends Component {
   };
 
   showPassword = () => {
-    document.getElementById("password").type = document.getElementById("password").type == "text" ? "password" : "text";
+    document.getElementById("password").type =
+      document.getElementById("password").type === "text" ? "password" : "text";
     document.getElementById("confirmPassword").type =
-      document.getElementById("confirmPassword").type == "text" ? "password" : "text";
+      document.getElementById("confirmPassword").type === "text" ? "password" : "text";
   };
 
   render() {
