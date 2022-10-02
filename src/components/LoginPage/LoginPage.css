@@ -26,7 +26,7 @@ form {
 	flex-direction: column;
 	padding: 0 50px;
 	height: 50%;
-	width: 50%;
+	/* width: 50%; */
 	text-align: center;
 }
 

@@ -17,7 +17,7 @@
     "react-dom": "^16.13.1",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",
     "tachyons": "^4.12.0"
@@ -40,7 +40,6 @@
     "url": "https://github.com/zero-to-mastery/book-tracker/issues"
   },
   "homepage": "https://zero-to-mastery.github.io/book-tracker/",
-  "devDependencies": {},
   "browserslist": [
     ">0.2%",
     "not dead",

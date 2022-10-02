@@ -9,16 +9,13 @@ const AddPage = () => {
     title: "",
     author: "",
   });
-  // const [message, setMessage] = useState(false);
 
   useEffect(() => {
     const defaultBooks = getBooks();
     const fetchBooks = () =>
       fetch("http://localhost:5000/books")
         .then((res) => res.json())
-        .then((data) => {
-          setBooks(data);
-        })
+        .then((data) => setBooks(data))
         .catch(setBooks(defaultBooks));
 
     fetchBooks();
@@ -32,18 +29,14 @@ const AddPage = () => {
   const onSubmitBook = (e) => {
     e.preventDefault();
 
-    // console.log(e.target[0].value, e.target[1].value);
+    if(newBook.title != ""){
+      const allBooks = [
+        ...books,{ ...newBook },
+      ];
+      setBooks(allBooks);
+      setNewBook({title:'', author:''})
+    }
 
-    const allBooks = [
-      ...books,
-      {
-        ...newBook,
-      },
-    ];
-
-    // console.log("All books : ", allBooks);
-
-    setBooks(allBooks);
   };
 
   return (
@@ -53,7 +46,7 @@ const AddPage = () => {
         <h2>Book's List</h2>
         <ul className="p-0 text-center">
           {books?.map((book) => {
-            const url = `http://www.google.com/search?q=${book.title}%20book`;
+            const url = `https://www.google.com/search?q=${book.title}%20book`;
             return (
               <li key={book.id || book.title}>
                 <a href={url} target="_blank" rel="noopener noreferrer">
