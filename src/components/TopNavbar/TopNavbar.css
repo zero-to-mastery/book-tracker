@@ -1,5 +1,5 @@
 .navigation {
-    background: linear-gradient(to left, rgb(24, 27, 27), rgb(74, 40, 40));
+    background: linear-gradient(to left, rgb(24, 27, 27), rgb(113, 95, 95));
     box-shadow: 0 10px 20px rgba(32, 32, 32, 0.77);
 }
 
@@ -10,13 +10,14 @@
 }
 
 .nav-link:hover {
-    background-color: #493e6d;
+    background-color: #5139a0;
     border-radius: 2px;
 }
 
 
 a {
     color: var(--link-color);
+    font-size: 20px;
 }
 
 .nav-active {
