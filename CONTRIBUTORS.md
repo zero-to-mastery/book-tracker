@@ -93,6 +93,7 @@
 - [@mpcaples](https://github.com/mpcaples)
 - [@FamNew](https://github.com/FamNew)
 - [@stuti371](https://github.com/stuti371)
+- [@jacobWeeces](https://github.com/jacobweeces)
 - [@accez](https://github.com/accez)
 - [@zurirma](https://github.com/zurirma)
 - [@chiragarora01](https://github.com/chiragarora01)
