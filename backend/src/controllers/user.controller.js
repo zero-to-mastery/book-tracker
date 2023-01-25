@@ -37,6 +37,7 @@ export default {
       res.header("x-auth-token", token).status(201).send({
         message: "User successfully registered",
         user: user._id,
+        token
       });
     } catch (err) {
       res.status(400).json(err);
