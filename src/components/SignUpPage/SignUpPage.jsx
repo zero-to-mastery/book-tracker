@@ -36,7 +36,7 @@ const SignUpPage = () =>{
 
   const showPassword = () =>{
     document.getElementById('password').type = document.getElementById('password').type === 'text'?'password':'text'
-    document.getElementById('ConfirmPassword').type = document.getElementById('confirmPassword').type === 'text'?'password':'text'
+    document.getElementById('confirmPassword').type = document.getElementById('confirmPassword').type === 'text'?'password':'text'
   }
 
 
