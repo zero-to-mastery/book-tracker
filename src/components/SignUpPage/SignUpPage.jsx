@@ -4,7 +4,7 @@ import SignUpService from "../../services/signUp.service";
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
 import { formFields } from "./SignUpFormFields";
 
-const SignUpPage = () =>{
+const SignUpPage = ({ history }) =>{
 
   const [data, setData] = useState({
     name: '',
@@ -22,10 +22,15 @@ const SignUpPage = () =>{
       // setErrors({...errors, ["confirmPassword"]:"passwords dont match"})
       setErrors({['confirmPassword']: 'passwords dont match'})
     }else{
-      const response = await SignUpService.request(JSON.stringify({name, email, password}))
-      if(response.error){
-        setErrors({...response.body.details})
+      const {body, error} = await SignUpService.request(JSON.stringify({name, email, password}))
+
+      if(error){
+        setErrors({...body.details})
+        return
       }
+
+      localStorage.setItem("token", body.token)
+      history.push("/")
     }
   }
 
@@ -42,7 +47,7 @@ const SignUpPage = () =>{
 
   return(
     <React.Fragment>
-      <form onSubmit={handleSubmit} className='form-container'>
+      <form className='form-container'>
         <h2>Sign Up</h2>
         <input 
         type="text" 
@@ -81,7 +86,7 @@ const SignUpPage = () =>{
         <input type="checkbox" onClick={showPassword} style={{ width: "2%" }} />
         <span style={{ color: "white", fontSize: "0.8rem" }}>Show password</span>
       </div>
-      <button style={{ position: "relative", left: "43%" }}>Register</button>
+      <button style={{ position: "relative", left: "43%" }} onClick={handleSubmit}>Register</button>
     </React.Fragment>
   )
 }
