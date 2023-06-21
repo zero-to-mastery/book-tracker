@@ -28,7 +28,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "\"Tracks the amount of books that you've read, the ones you want to  read, and the progress on the ones  you're reading.\"",
+  "description": "\"Tracks the amount of books that you've read, the ones you want to read, and the progress on the ones you're reading.\"",
   "main": "script.js",
   "repository": {
     "type": "git",
