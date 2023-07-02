@@ -13,20 +13,40 @@
   /*Light Brownish color*/
 }
 
+.form-control.search {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 15rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btn.btn-default {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: auto;
+  margin: 0;
+  margin-left: -10px;
+  height: 34px;
+}
 
 .navbar {
+  margin-top: -20px;
   margin-bottom: 0;
+  border: 0;
+  border-radius: 0px;
 }
 
-.navbar-nav{
-    float: left;
+.navbar-nav {
+  margin: 10px;
 }
 
-.img-responsive{
-    height: auto;
-    width: auto;
-    max-height: 72px;
-    max-width: 250px;
+.img-responsive {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+  padding: 10px;
 }
 
 *,
@@ -35,7 +55,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #body_wrapper {
@@ -44,7 +64,8 @@
   width: 100%;
   grid-auto-columns: repeat(6, 1fr);
   grid-template-rows: repeat (3, auto);
-  grid-template-areas: "header header header header header header"
+  grid-template-areas:
+    "header header header header header header"
     "body body body body body body"
     "footer footer footer footer footer footer";
 }
@@ -92,11 +113,11 @@
 }
 
 #title {
-  font-size:  60px;
+  font-size: 60px;
 }
 
 #heading {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
   font-size: 70px;
   color: white;
@@ -133,7 +154,7 @@ input {
   color: #007bff;
 }
 
-#record{
+#record {
   margin: 30px;
 }
 
@@ -170,10 +191,7 @@ table td {
 
 /* register form*/
 
-
-
 /**********Animate.css**********/
-
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -196,7 +214,6 @@ table td {
 }
 
 @-webkit-keyframes bounce {
-
   from,
   20%,
   53%,
@@ -230,7 +247,6 @@ table td {
 }
 
 @keyframes bounce {
-
   from,
   20%,
   53%,
@@ -271,7 +287,6 @@ table td {
 }
 
 @-webkit-keyframes flash {
-
   from,
   50%,
   to {
@@ -285,7 +300,6 @@ table td {
 }
 
 @keyframes flash {
-
   from,
   50%,
   to {
@@ -424,7 +438,6 @@ table td {
 }
 
 @-webkit-keyframes shake {
-
   from,
   to {
     -webkit-transform: translate3d(0, 0, 0);
@@ -450,7 +463,6 @@ table td {
 }
 
 @keyframes shake {
-
   from,
   to {
     -webkit-transform: translate3d(0, 0, 0);
@@ -765,7 +777,6 @@ table td {
 }
 
 @-webkit-keyframes jello {
-
   from,
   11.1%,
   to {
@@ -810,7 +821,6 @@ table td {
 }
 
 @keyframes jello {
-
   from,
   11.1%,
   to {
@@ -862,7 +872,6 @@ table td {
 }
 
 @-webkit-keyframes bounceIn {
-
   from,
   20%,
   40%,
@@ -908,7 +917,6 @@ table td {
 }
 
 @keyframes bounceIn {
-
   from,
   20%,
   40%,
@@ -961,7 +969,6 @@ table td {
 }
 
 @-webkit-keyframes bounceInDown {
-
   from,
   60%,
   75%,
@@ -1000,7 +1007,6 @@ table td {
 }
 
 @keyframes bounceInDown {
-
   from,
   60%,
   75%,
@@ -1044,7 +1050,6 @@ table td {
 }
 
 @-webkit-keyframes bounceInLeft {
-
   from,
   60%,
   75%,
@@ -1083,7 +1088,6 @@ table td {
 }
 
 @keyframes bounceInLeft {
-
   from,
   60%,
   75%,
@@ -1127,7 +1131,6 @@ table td {
 }
 
 @-webkit-keyframes bounceInRight {
-
   from,
   60%,
   75%,
@@ -1166,7 +1169,6 @@ table td {
 }
 
 @keyframes bounceInRight {
-
   from,
   60%,
   75%,
@@ -1210,7 +1212,6 @@ table td {
 }
 
 @-webkit-keyframes bounceInUp {
-
   from,
   60%,
   75%,
@@ -1249,7 +1250,6 @@ table td {
 }
 
 @keyframes bounceInUp {
-
   from,
   60%,
   75%,
@@ -3685,7 +3685,6 @@ table td {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-
 
 /*---Login page*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
