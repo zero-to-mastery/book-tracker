@@ -20,17 +20,17 @@ const TopNavbar = ({ user }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            <NavItem onClick={toggle}>
               <NavLink tag={Link} to="/wish-list" className="nav-link white underline pa4 pointer">
                 Books Wish-List
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem onClick={toggle}>
               <NavLink tag={Link} to="/currentlist" className="nav-active-style pa4">
                 Reading List
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem onClick={toggle}>
               <NavLink tag={Link} to="/add" className="nav-link white underline pa4" value="Add Book">
                 Add Book
               </NavLink>
@@ -39,7 +39,7 @@ const TopNavbar = ({ user }) => {
           <Nav className="ml-auto" navbar>
             {user ? (
               <>
-                <NavItem>
+                <NavItem onClick={toggle}>
                   <NavLink tag={Link} to="/logout" className="nav-active-style">
                     Logout
                   </NavLink>{" "}
@@ -48,13 +48,13 @@ const TopNavbar = ({ user }) => {
             ) : (
               <>
                 {" "}
-                <NavItem>
+                <NavItem onClick={toggle}>
                   {" "}
                   <NavLink tag={Link} to="/login" className="nav-active-style">
                     Login
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem onClick={toggle}>
                   <NavLink tag={Link} to="/signup" className="nav-active-style">
                     Sign Up
                   </NavLink>{" "}
