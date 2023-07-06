@@ -73,7 +73,7 @@ Contributions are very welcome, please view the [Code of Conduct](CODE_OF_CONDUC
 
 Add yourself to the [List of Contributors](CONTRIBUTORS.md) and submit a pull request if you've contributed.
 
-**Working on your first Pull Request?** Learn how from this in-depth series: [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
+**Working on your first Pull Request?** Learn how from this in-depth series: [How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github).
 
 ## License
 
