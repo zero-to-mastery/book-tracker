@@ -15,7 +15,7 @@ app.use("/api/auth", userRoute);
 app.use("/", bookRoute);
 // DATABASE CONNECTION SETTINGS
 mongoose
-  .connect(DB_CONNECTION, {
+  .connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
