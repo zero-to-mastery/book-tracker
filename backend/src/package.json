@@ -3,6 +3,8 @@
     "version": "1.0.0",
     "description": "\"Covers all the backend features\"",
     "main": "server.js",
+    "type": "commonjs",
+
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

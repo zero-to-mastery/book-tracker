@@ -13,10 +13,10 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/auth", userRoute);
 app.use("/", bookRoute);
-
+const DB_CONNECTION="mongodb+srv://Books:5buHWiEH3g1vXtFq@nasacluster.cijkzcv.mongodb.net/opensrc?retryWrites=true&w=majority";
 // DATABASE CONNECTION SETTINGS
 mongoose
-  .connect(process.env.DB_CONNECTION, {
+  .connect(DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
