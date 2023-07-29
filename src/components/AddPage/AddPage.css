@@ -24,8 +24,13 @@
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
-.book-list > ul > li a:hover {
+/* .book-list > ul > li a:hover {
   font-size: 30px;
+} */
+
+.book-list > ul > li a:hover {
+  font-size: 14.4px;
+  color: #ccc;
 }
 
 .add-book > h2,
@@ -34,9 +39,9 @@
 }
 
 .form-group label {
-  color: white
+  color: white;
 }
 
 .form-group {
-	width: 100%;
+  width: 100%;
 }
