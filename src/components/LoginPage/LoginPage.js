@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
+import signInService from "../../services/signIn.service";
 
 const LoginPage = ({ history }) => {
   const [data, setData] = useState({
@@ -18,16 +19,12 @@ const LoginPage = ({ history }) => {
     e.preventDefault();
 
     const { email, password } = data;
-
     async function login(email, password) {
-      await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      })
-        .then((res) => res.json())
+      await signInService
+        .request(JSON.stringify({ email, password }))
+        .then((res) => {
+          return res.body;
+        })
         .then((data) => {
           localStorage.setItem("token", data.token);
           history.push("/");
