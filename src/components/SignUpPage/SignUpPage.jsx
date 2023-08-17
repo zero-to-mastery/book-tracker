@@ -17,14 +17,15 @@ const SignUpPage = ({ history }) =>{
   const handleSubmit = async (e) =>{
     e.preventDefault()
     const {name, email, password, confirmPassword} = data
-
     if(password !== confirmPassword){
-      // setErrors({...errors, ["confirmPassword"]:"passwords dont match"})
+      alert("Password don't not match")
       setErrors({['confirmPassword']: 'passwords dont match'})
     }else{
       const {body, error} = await SignUpService.request(JSON.stringify({name, email, password}))
-
       if(error){
+        if(body.message == "User already registered."){
+          alert("User already registered")
+        }
         setErrors({...body.details})
         return
       }
