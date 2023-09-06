@@ -1,7 +1,3 @@
-## ** UPDATE: This repository is now archived and no longer accepting contributions.
-
-If you would like to contribute to our other open-source repos, there are several on our [Github profile](https://github.com/zero-to-mastery) **
-
 ## How to add your name to the project's contributor list
 To learn how to add your name to this project's contributor list, you can get started <a href="https://github.com/zero-to-mastery/start-here-guidelines"> here </a>.
 
