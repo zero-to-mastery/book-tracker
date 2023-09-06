@@ -1,3 +1,7 @@
+## ** UPDATE: This repository is archived. We are no longer accepting contributions. **
+
+** If you'd like to contribute to other Zero to Mastery projects, please take a look at our other [open-source projects](https://github.com/zero-to-mastery). **
+
 # Book Tracker
 
 ![Project Thumbnail](https://i.ibb.co/yhzRCG5/amazing-book-tracker-preview.jpg)
